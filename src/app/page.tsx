@@ -1,13 +1,45 @@
+'use client'
+
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+i18n
+.use(initReactI18next) // passes i18n down to react-i18next
+.init({
+  // the translations
+  // (tip move them in a JSON file and import them,
+  // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
+  resources: {
+    en: {
+      translation: {
+        "Welcome to React": "Welcome to React and react-i18next"
+      }
+    }
+  },
+  lng: "en", // if you're using a language detector, do not define the lng option
+  fallbackLng: "en",
+
+  interpolation: {
+    escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+  }
+});
+
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-black text-white min-h-screen">
+      <h1>{t('welcome')}</h1>
+      <p>{t('description')}</p>
+      <h2>{t('Welcome to React')}</h2>
+
       {/* Header Section */}
-      <header className="relative from-blue-900 to-black text-white" style={{ backgroundImage: "url('/images/background.png')"}}>
-        <div className="max-w-7xl mx-auto flex justify-between items-center p-6">
+      <header className="w-full bg-cover bg-center relative from-blue-900 to-black text-white" style={{ backgroundImage: "url('/images/background.png')"}}>
+        <div className="max-w-7xl mx-auto flex justify-between items-center pt-6 pb-6">
           <div className="flex items-center space-x-4">
             <img src="/images/logo.png" alt="Logo" className="w-28 h-20" />
           </div>
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-20 text-2xl">
             <a href="#" className="hover:underline">Home</a>
             <a href="#" className="hover:underline">About Us</a>
             <a href="#" className="hover:underline">Careers</a>
@@ -15,7 +47,7 @@ export default function Home() {
             <a href="#" className="hover:underline">En | Vi</a>
           </nav>
         </div>
-        <div className="text-center py-24">
+        <div className="py-24">
           <h1 className="text-5xl font-bold leading-tight">
             Innovation<br />Creativity<br />Go beyond
           </h1>
