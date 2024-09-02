@@ -6,7 +6,9 @@ import enTranslation from './locales/en/common.json';
 import viTranslation from './locales/vi/common.json';
 
 // Cấu hình i18next
-const savedLanguage = localStorage.getItem('language') || 'en';
+const isClient = typeof window !== 'undefined';
+const savedLanguage = isClient ? localStorage.getItem('language') || 'en' : 'en';
+// const savedLanguage = localStorage.getItem('language') || 'en';
 i18n
   .use(initReactI18next) // Kết nối i18next với React
   .init({
