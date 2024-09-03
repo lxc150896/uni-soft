@@ -1,101 +1,88 @@
 'use client'
 
-import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import '@/app/i18n';
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import Banner from "@/components/Banner";
 
 export default function Home() {
   const { t } = useTranslation();
 
-  const values = [
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
+  const cores = [
+    { icon: <img src="/images/core_1.png" />, text: 'Ambition' },
+    { icon: <img src="/images/core_2.png"/>, text: 'Think BIG' },
+    { icon: <img src="/images/core_3.png" />, text: 'Creation' },
+    { icon: <img src="/images/core_4.png" />, text: 'Autonomy' },
+    { icon: <img src="/images/core_5.png" />, text: 'Respect' },
   ];
-
-  const salarys = [
-    { title: 'Competitive salary', icon: <img src="/images/salary_icon_1.png" /> },
-    { title: 'Profit sharing', icon: <img src="/images/salary_icon_2.png" /> },
-    { title: 'Promotion path', icon: <img src="/images/salary_icon_3.png" /> },
-    { title: 'Performance management', icon: <img src="/images/salary_icon_4.png" /> },
-    { title: 'Society passion', icon: <img src="/images/salary_icon_5.png" /> },
-    { title: 'Welfare', icon: <img src="/images/salary_icon_6.png" /> },
-    { title: 'Culture of thinking', icon: <img src="/images/salary_icon_7.png" /> },
-    { title: 'Working equipment', icon: <img src="/images/salary_icon_8.png" /> },
-  ]
   
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Header Section */}
       <Header />
       {/* banner */}
-      <div className="relative">
-        <img src="/images/about_bg.png" alt="Background" className="lg:w-full lg:h-full object-cover" />
-        <div className="absolute md:top-[50%] top-[20%] md:ml-24 ml:16 left-0 h-full flex flex-col justify-between">
-          <div>
-            <div className="lg:text-[85px] md:text-6xl text-5xl font-bold bg-gradient-to-r bg-clip-text text-transparent from-blue-600 via-green-500 to-green-400 animate-text">
-              <span>Careers</span>
-            </div>
-            <p className="mt-3 lg:text-2xl md:text-xl text-base">Home / Careers</p>
-          </div>
-        </div>
-      </div>
+      <Banner urlImage="/images/about_us_bg.png" title="About Us" descript="Home / About Us" />
 
-      <div className="container mx-auto md:my-14 my-0 md:pt-16 pt-8">
-        {/* Top Position */}
-        <div className="md:mb-12 mb-6">
-          <h2 className="text-center lg:text-[56px] md:text-5xl text-3xl font-bold md:mb-20 mb-10">Top Position</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {/* Example card */}
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="p-6 bg-gray-800 text-white rounded-lg shadow-md"
-              >
-                <h3 className="text-2xl font-semibold mb-2">{value.title}</h3>
-                <div className="flex items-center text-base mb-4">
-                  <img src="/images/footer_icon_map.png" alt="Logo" className="lg:w-10 w-6" />: {value.local}
-                </div>
-                <p className="text-base mb-4">Salary: {value.salary}</p>
-                <p className="text-base mb-4">Salary: {value.date}</p>
-                <p className="text-base mb-4 text-blue-500">{'View JD' + '>'}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Be a part of Unisoft */}
-        <div className="md:mt-44 mt-16 text-center">
-          <h2 className="lg:text-[56px] md:text-5xl text-3xl font-bold mb-4">Be a part of Unisoft</h2>
-          <p className="md:text-2xl text-base md:mb-32 mb-16">
-            Get your chance to work with creative and like-minded people and together we empower the world.
+      <div className="container bg-black text-white flex flex-col items-center lg:py-28 md:py-16 py-10">
+        {/* Section: We are Unisoft */}
+        <div className="text-center lg:mb-30 md:mb-20 mb-10 px-4">
+          <h2 className="text-center xl:text-[56px] lg:text-4xl md:text-3xl text-xl font-bold lg:mb-14 md:mb-6 mb-4">We are Unisoft!</h2>
+          <p className="md:text-lg sm:text-sm text-xs leading-relaxed">
+            Unisoft was founded in 2023, starting from a small but passionate team with big dreams to become a top Technological Corporation in Vietnam. After a 5-year journey full of experiments, we remain steadfast with our Technology Vision as we strive to create exciting experiences for billions of users around the world. We are getting closer to achieving that Vision day by day. We are warriors and will fight with great technology and a warrior spirit!
           </p>
-          
-          {/* Bọc hình ảnh trong một div có overflow-x: scroll và ẩn thanh cuộn */}
-          <div className="flex gap-4 overflow-x-scroll scrollbar-hide">
-            <img src="/images/about_slide_1.png" alt="Image 1" className="md:min-w-[600px] min-w-[200px]" />
-            <img src="/images/about_slide_2.png" alt="Image 2" className="md:min-w-[600px] min-w-[200px]" />
-            <img src="/images/about_slide_3.png" alt="Image 3" className="md:min-w-[600px] min-w-[200px]" />
-          </div>
         </div>
 
-        {/* Join with Us */}
-        <div className="text-center md:mt-24 mt-12 md:my-14 my-6 md:mb-40 mb-16">
-          <h2 className="lg:text-[56px] md:text-5xl text-3xl font-bold md:mb-28 mb-12">Join with Us</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-y-44 gap-y-20">
-            {/* Example Icon */}
-            {salarys.map((item, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div className="md:mb-8 mb-4">{item.icon}</div>
-                <h3 className="md:text-2xl text-base font-semibold">{item.title}</h3>
+        {/* Section: Core Values */}
+        <div className="text-center lg:mb-16 mb-8">
+          <h2 className="xl:text-[56px] lg:text-4xl md:text-3xl text-xl font-bold lg:mb-16 md:mb-12 mb-8">Core Values</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:gap-x-16 lg:gap-x-6 md:gap-3 sm:gap-6 gap-4">
+            {cores.map((value, index) => (
+              <div key={index} className="flex flex-col items-center bg-gray-800 lg:py-14 md:py-10 sm:py-8 py-6 sm:px-10 px-6 rounded-lg border-blue-500 border-solid border">
+                <div>{value.icon}</div>
+                <p className="lg:mt-12 md:mt-4 mt-8 text-center 2xl:text-2xl xl:text-xl lg:text-base">{value.text}</p>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Section: Quote */}
+        <div className="">
+          <img src="/images/we_go.png" alt="we" />
+        </div>
+
+        {/* Vision Section */}
+        <div className="flex relative w-full xl:pt-28 md:mt-20 mt-16 items-center">
+          <img
+            src="/images/our_vision.png" // Đường dẫn tới ảnh của bạn
+            alt="Team Photo"
+            className="object-cover w-1/2 h-full"
+          />
+          <div className="absolute right-0 bg-blue-600 text-white lg:py-10 md:py-6 sm:py-4 py-2 px-2 w-[55%] h-[70%] my-auto text-center">
+            <h2 className="xl:text-[56px] lg:text-4xl md:text-xl sm:text-lg text-sm font-bold text-white lg:mb-10 sm:mb-4 mb-1">
+              Our <span className="text-green-500">Vision</span>
+            </h2>
+            <p className="xl:text-2xl lg:text-base md:text-sm sm:text-xs text-[8px]">
+              We aim to become one of the leaders in the industry by creating heartfelt experiences for our users with qualified and trendy products. Besides, we continue to be a reliable companion by bringing value and equality to the relationship between us and our partners.
+            </p>
+          </div>
+        </div>
+
+        {/* Mission Section */}
+        <div className="flex w-full lg:pt-16 md:pt-10 mt-8 items-center ">
+          <div className="bg-blue-600 text-white lg:py-10 md:py-6 sm:py-4 py-2 px-2 w-3/4 h-[70%] my-auto text-center quote-container z-10 mr-[-25%]">
+            <h2 className="xl:text-[56px] lg:text-4xl md:text-xl sm:text-lg text-sm font-bold text-white lg:mb-10 sm:mb-4 mb-1 w-9/12">
+              Our <span className="text-green-500">Mision</span>
+            </h2>
+            <p className="xl:text-2xl lg:text-base md:text-sm sm:text-xs text-[8px] w-9/12">
+              Delight billions of users all over the world with exceptional experiences by creating top notch tech products that enter in every aspect of human lives.
+            </p>
+          </div>
+          <img
+            src="/images/our_mision.png"
+            alt="Tech Background"
+            className="object-cover w-1/2 h-full right-0"
+          />
         </div>
       </div>
 

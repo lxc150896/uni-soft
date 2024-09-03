@@ -3,6 +3,7 @@
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import { Footer } from "@/components/Footer";
+import { Menu } from "@/components/Header/Menu";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -63,20 +64,11 @@ export default function Home() {
 
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between">
           <div>
-            <div className="xl:ml-20 lg:ml-14 ml-4 xl:mr-28 lg:mr-20 mr-4 mx-auto flex justify-between items-center lg:py-8 py-2 lg:h-[144px] h-auto">
+            <div className="xl:ml-20 lg:ml-14 ml-4 xl:mr-28 lg:mr-20 mr-4 mx-auto flex justify-between items-center lg:py-8 md:py-4 py-2 h-auto">
               <div className="flex items-center space-x-4">
-                <img src="/images/logo.png" alt="Logo" className="lg:w-28 lg:h-20 w-14 h-10" />
+                <img src="/images/logo.png" alt="Logo" className="xl:w-24 xl:h-16 md:w-14 md:h-10 w-10 h-6" />
               </div>
-              <nav className="flex xl:space-x-20 lg:space-x-10 space-x-2 lg:text-xl xl:text-2xl text-xs">
-                <button className="hover:underline">Home</button>
-                <button className="hover:underline">About Us</button>
-                <button className="hover:underline">Careers</button>
-                <button className="hover:underline">Contact</button>
-                <div>
-                  <button className="hover:underline lg:mr-2 mr-1" onClick={() => changeLanguage('en')}>En</button>|
-                  <button className="hover:underline lg:ml-2 ml-1" onClick={() => changeLanguage('vi')}>Vi</button>
-                </div>
-              </nav>
+              <Menu />
             </div>
 
             <div className="md:py-8 py-2 lg:px-24 px-10">
@@ -109,42 +101,42 @@ export default function Home() {
       <div className="container mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 2xl:gap-12 xl:gap-4 md:gap-6 gap-1 mt-6 lg:mt-12 xl:mt-24 mb-9">
           {/* Card 1 */}
-          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto xl:w-[279px] xl:h-[466px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
+          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto 2xl:w-[300px] 2xl:h-[500px] xl:w-[265px] xl:h-[446px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
               style={{ backgroundImage: "url('/images/tag.png')", backgroundSize: "100%" }}>
             <div className="rounded-full mb-4 lg:mb-9">
-              <img src="/images/leading.png" alt="leading" className="w-16 lg:w-20 mx-auto" />
+              <img src="/images/leading.png" alt="leading" className="w-14 xl:w-20 lg:w-16 mx-auto" />
             </div>
-            <h2 className="text-2xl lg:text-4xl xl:text-6xl font-bold text-blue-500">20+</h2>
+            <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">20+</h2>
             <p className="leading-6 lg:leading-10 mt-8 lg:mt-9 text-lg xl:text-2xl">Partners have collaborated to release</p>
           </div>
 
           {/* Card 2 */}
-          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto xl:w-[279px] xl:h-[466px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
+          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto 2xl:w-[300px] 2xl:h-[500px] xl:w-[265px] xl:h-[446px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
               style={{ backgroundImage: "url('/images/tag.png')", backgroundSize: "100%" }}>
             <div className="rounded-full mb-4 lg:mb-9">
-              <img src="/images/leading_1.png" alt="leading" className="w-16 lg:w-20 mx-auto" />
+              <img src="/images/leading_1.png" alt="leading" className="w-14 xl:w-20 lg:w-16 mx-auto" />
             </div>
-            <h2 className="text-2xl lg:text-4xl xl:text-6xl font-bold text-blue-500">20+</h2>
+            <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">20+</h2>
             <p className="leading-6 lg:leading-10 mt-8 lg:mt-9 text-lg xl:text-2xl">Unisoft members create apps every day</p>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto xl:w-[279px] xl:h-[466px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
+          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto 2xl:w-[300px] 2xl:h-[500px] xl:w-[265px] xl:h-[446px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
               style={{ backgroundImage: "url('/images/tag.png')", backgroundSize: "100%" }}>
             <div className="rounded-full mb-4 lg:mb-9">
-              <img src="/images/leading_2.png" alt="leading" className="w-16 lg:w-20 mx-auto" />
+              <img src="/images/leading_2.png" alt="leading" className="w-14 xl:w-20 lg:w-16 mx-auto" />
             </div>
-            <h2 className="text-2xl lg:text-4xl xl:text-6xl font-bold text-blue-500">100+</h2>
+            <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">100+</h2>
             <p className="leading-6 lg:leading-10 mt-8 lg:mt-9 text-lg xl:text-2xl">Released apps/games products</p>
           </div>
 
           {/* Card 4 */}
-          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto xl:w-[279px] xl:h-[466px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
+          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto 2xl:w-[300px] 2xl:h-[500px] xl:w-[265px] xl:h-[446px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
               style={{ backgroundImage: "url('/images/tag.png')", backgroundSize: "100%" }}>
             <div className="rounded-full mb-4 lg:mb-9">
-              <img src="/images/leading_3.png" alt="leading" className="w-16 lg:w-20 mx-auto" />
+              <img src="/images/leading_3.png" alt="leading" className="w-14 xl:w-20 lg:w-16 mx-auto" />
             </div>
-            <h2 className="text-2xl lg:text-4xl xl:text-6xl font-bold text-blue-500">100M+</h2>
+            <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">100M+</h2>
             <p className="leading-6 lg:leading-10 mt-8 lg:mt-9 text-lg xl:text-2xl">Downloads, Daily active</p>
           </div>
         </div>
