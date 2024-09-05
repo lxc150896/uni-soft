@@ -1,4 +1,11 @@
+'use client'
+
+import { useTranslation } from "react-i18next";
+import '@/app/i18n';
+
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative">
     <div className="text-white relative lg:p-4 p-0 my-auto flex items-center justify-center lg:h-[140px] xl:h-[164px] 2xl:h-[200px] md:h-[98px] h-14">
@@ -18,21 +25,21 @@ export const Footer = () => {
         <div className="flex justify-center items-center">
           <img src="/images/footer_icon_email.png" alt="Logo" className="lg:w-11 md:w-8 w-5" />
           <div className="xl:p-3 lg:p-1">
-            <p className="md:mb-1 mb-0 lg:text-xs xl:text-base 2xl:text-lg md:text-[10px] text-[8px]">Email:</p> <p className="lg:text-[10px] xl:text-xs 2xl:text-sm md:text-[8px] text-[6px]">Unisoftapplication.com.vn</p>
+            <p className="md:mb-1 mb-0 lg:text-xs xl:text-base 2xl:text-lg md:text-[10px] text-[8px]">{t('footer.email')}</p> <p className="lg:text-[10px] xl:text-xs 2xl:text-sm md:text-[8px] text-[6px]">Unisoftapplication.com.vn</p>
           </div>
         </div>
         
         <div className="flex justify-center items-center">
           <img src="/images/footer_icon_phone.png" alt="Logo" className="lg:w-11 md:w-8 w-5"/>
           <div className="xl:p-3 lg:p-1">
-            <p className="md:mb-1 mb-0 lg:text-xs xl:text-base 2xl:text-lg md:text-[10px] text-[8px]">Mobile:</p><p className="lg:text-[10px] xl:text-xs 2xl:text-sm md:text-[8px] text-[6px]"> (+84) 356790472</p>
+            <p className="md:mb-1 mb-0 lg:text-xs xl:text-base 2xl:text-lg md:text-[10px] text-[8px]">{t('footer.mobile')}</p><p className="lg:text-[10px] xl:text-xs 2xl:text-sm md:text-[8px] text-[6px]"> (+84) 356790472</p>
           </div>
         </div>
         
         <div className="flex justify-center items-center">
           <img src="/images/footer_icon_map.png" alt="Logo" className="lg:w-11 md:w-8 w-5" />
           <div className="xl:p-3 lg:p-1">
-            <p className="md:mb-1 mb-0 lg:text-xs xl:text-base 2xl:text-lg md:text-[10px] text-[8px]">Address:</p> <p className="lg:text-[10px] xl:text-xs 2xl:text-sm md:text-[8px] text-[6px]">Up Office, No9 /75 Tran Thai Tong, Cau Giay, Ha Noi</p>
+            <p className="md:mb-1 mb-0 lg:text-xs xl:text-base 2xl:text-lg md:text-[10px] text-[8px]">{t('footer.address')}</p> <p className="lg:text-[10px] xl:text-xs 2xl:text-sm md:text-[8px] text-[6px]">Up Office, No9 /75 Tran Thai Tong, Cau Giay, Ha Noi</p>
           </div>
         </div>
         

@@ -1,4 +1,5 @@
-import '@/app/i18n';
+'use client'
+
 import { Menu } from "./Menu";
 
 export const Header = () => {

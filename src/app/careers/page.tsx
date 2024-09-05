@@ -19,14 +19,14 @@ export default function Home() {
   ];
 
   const salarys = [
-    { title: 'Competitive salary', icon: <img src="/images/salary_icon_1.png" /> },
-    { title: 'Profit sharing', icon: <img src="/images/salary_icon_2.png" /> },
-    { title: 'Promotion path', icon: <img src="/images/salary_icon_3.png" /> },
-    { title: 'Performance management', icon: <img src="/images/salary_icon_4.png" /> },
-    { title: 'Society passion', icon: <img src="/images/salary_icon_5.png" /> },
-    { title: 'Welfare', icon: <img src="/images/salary_icon_6.png" /> },
-    { title: 'Culture of thinking', icon: <img src="/images/salary_icon_7.png" /> },
-    { title: 'Working equipment', icon: <img src="/images/salary_icon_8.png" /> },
+    { title: t('careers.competitive_salary'), icon: <img src="/images/salary_icon_1.png" /> },
+    { title: t('careers.profit_sharing'), icon: <img src="/images/salary_icon_2.png" /> },
+    { title: t('careers.promotion_path'), icon: <img src="/images/salary_icon_3.png" /> },
+    { title: t('careers.performance_management'), icon: <img src="/images/salary_icon_4.png" /> },
+    { title: t('careers.society_passion'), icon: <img src="/images/salary_icon_5.png" /> },
+    { title: t('careers.welfare'), icon: <img src="/images/salary_icon_6.png" /> },
+    { title: t('careers.culture_of_thinking'), icon: <img src="/images/salary_icon_7.png" /> },
+    { title: t('careers.working_equipment'), icon: <img src="/images/salary_icon_8.png" /> },
   ]
   
   return (
@@ -34,12 +34,12 @@ export default function Home() {
       {/* Header Section */}
       <Header />
       {/* banner */}
-      <Banner urlImage="/images/careers_bg.png" title="Careers" descript="Home / Careers" />
+      <Banner urlImage="/images/careers_bg.png" title={t('menu.careers')} descript={t('careers.home_careers')} />
 
       <div className="container mx-auto md:my-14 my-0 xl:pt-16 pt-4">
         {/* Top Position */}
         <div className="md:mb-12 mb-6">
-          <h2 className="text-center lg:text-[56px] md:text-3xl text-xl font-bold md:mb-20 mb-10">Top Position</h2>
+          <h2 className="text-center lg:text-[56px] md:text-3xl text-xl font-bold md:mb-20 mb-10">{t('careers.top_position')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {/* Example card */}
             {values.map((value, index) => (
@@ -51,9 +51,9 @@ export default function Home() {
                 <div className="flex items-center md:text-base md:mb-4 text-sm md-3">
                   <img src="/images/footer_icon_map.png" alt="Logo" className="lg:w-10 w-6" />: {value.local}
                 </div>
-                <p className="md:text-base md:mb-4 text-sm md-3">Salary: {value.salary}</p>
-                <p className="md:text-base md:mb-4 text-sm md-3">Salary: {value.date}</p>
-                <p className="md:text-base md:mb-4 text-sm md-3 text-blue-500">{'View JD' + '>'}</p>
+                <p className="md:text-base md:mb-4 text-sm md-3">{t('careers.salary')} {value.salary}</p>
+                <p className="md:text-base md:mb-4 text-sm md-3">{t('careers.expiration_date')} {value.date}</p>
+                <p className="md:text-base md:mb-4 text-sm md-3 text-blue-500">{t('careers.view_jd')}</p>
               </div>
             ))}
           </div>
@@ -61,9 +61,9 @@ export default function Home() {
 
         {/* Be a part of Unisoft */}
         <div className="md:mt-32 mt-16 text-center">
-          <h2 className="lg:text-[56px] md:text-3xl text-xl font-bold lg:mb-8 mb-4">Be a part of Unisoft</h2>
+          <h2 className="lg:text-[56px] md:text-3xl text-xl font-bold lg:mb-8 mb-4">{t('careers.be_a_part')}</h2>
           <p className="md:text-2xl text-base md:mb-24 mb-16">
-            Get your chance to work with creative and like-minded people and together we empower the world.
+            {t('careers.get_your_chance')}
           </p>
           
           {/* Bọc hình ảnh trong một div có overflow-x: scroll và ẩn thanh cuộn */}
@@ -76,7 +76,7 @@ export default function Home() {
 
         {/* Join with Us */}
         <div className="text-center md:mt-24 mt-12 md:my-14 my-6 md:mb-40 mb-16">
-          <h2 className="lg:text-[56px] md:text-3xl text-xl font-bold md:mb-28 mb-12">Join with Us</h2>
+          <h2 className="lg:text-[56px] md:text-3xl text-xl font-bold md:mb-28 mb-12">{t('careers.join_with_us')}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-y-28 gap-y-14">
             {/* Example Icon */}
             {salarys.map((item, index) => (

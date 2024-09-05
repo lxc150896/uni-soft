@@ -1,4 +1,84 @@
 {
-  "welcome": "Welcomexx",
-  "description": "This is an example description."
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "careers": "Careers", 
+    "contact": "Contact"
+  },
+  "home": {
+    "innovation": "Innovation",
+    "creativity": "Creativity",
+    "go_beyond": "Go beyond",
+    "learn_more": "Learn More",
+    "leading_corporations": "Leading Corporations",
+    "partners_have": "Partners have collaborated to release",
+    "unisoft_member": "Unisoft members create apps every day",
+    "released_product": "Released apps/games products",
+    "download_active": "Downloads, Daily active",
+    "about_us": "About Us",
+    "vision": "Vision",
+    "core_value": "Core & Value",
+    "our_values": "Our Values",
+    "best_of_product": "Best of Products",
+    "top_partners": "Top Partners",
+    "push_for_speed": "Push for speed",
+    "take_risks": "Take Risks",
+    "share_accept_feedback": "Share & Accept feedback",
+    "fight_politics": "Fight BS & politics",
+    "set_the_highest_standards": "Set the highest standards",
+    "act_like_an_owner": "Act like an owner",
+    "disrupt_the_status_quo": "Disrupt the status quo",
+    "put_the_company": "Put the company’s interest first",
+    "think_big": "Think Big",
+    "think_long_term": "Think long-term"
+  },
+  "about": {
+    "we_are": "We are Unisoft!",
+    "unisoft_was": "Unisoft was founded in 2023, starting from a small but passionate team with big dreams to become a top Technological Corporation in Vietnam. After a 5-year journey full of experiments, we remain steadfast with our Technology Vision as we strive to create exciting experiences for billions of users around the world. We are getting closer to achieving that Vision day by day. We are warriors and will fight with great technology and a warrior spirit!",
+    "core_value": "Core Values",
+    "our": "Our",
+    "vision": "Vision",
+    "we_aim_to": "We aim to become one of the leaders in the industry by creating heartfelt experiences for our users with qualified and trendy products. Besides, we continue to be a reliable companion by bringing value and equality to the relationship between us and our partners.",
+    "mision": "Mision",
+    "delight_billions": "Delight billions of users all over the world with exceptional experiences by creating top notch tech products that enter in every aspect of human lives.",
+    "ambition": "Ambition",
+    "think_big": "Think BIG",
+    "creation": "Creation",
+    "autonomy": "Autonomy",
+    "respect": "Respect",
+    "home_about": "Home / About Us"
+  },
+  "careers": {
+    "competitive_salary": "Competitive salary",
+    "profit_sharing": "Profit sharing",
+    "promotion_path": "Promotion path",
+    "performance_management": "Performance management",
+    "society_passion": "Society passion",
+    "welfare": "Welfare",
+    "culture_of_thinking": "Culture of thinking",
+    "working_equipment": "Working equipment",
+    "top_position": "Top Position",
+    "salary": "Salary:",
+    "view_jd": "View JD >",
+    "be_a_part": "Be a part of Unisoft",
+    "get_your_chance": "Get your chance to work with creative and like-minded people and together we empower the world.",
+    "join_with_us": "Join with Us",
+    "home_careers": "Home / Careers"
+  },
+  "contact": {
+    "home_contact": "Home / Contact",
+    "contact_with": "Contact with",
+    "unisoft": "Unisoft",
+    "contact_information": "Contact Information",
+    "say_something": "Say something to start a live chat!",
+    "email": "Email:",
+    "mobile": "Mobile:",
+    "address": "Address:",
+    "send": "Send"
+  },
+  "footer": {
+    "email": "Email:",
+    "mobile": "Mobile:",
+    "address": "Address:"
+  }
 }

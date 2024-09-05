@@ -1,4 +1,85 @@
 {
-  "welcome": "Chào mừng xx",
-  "description": "Đây là một mô tả ví dụx."
+  "menu": {
+    "home": "Trang Chủ",
+    "about": "Giới thiệu",
+    "careers": "Tuyển dụng",
+    "contact": "Liên Hệ"
+  },
+  "home": {
+    "innovation": "Đổi Mới",
+    "creativity": "Sáng Tạo",
+    "go_beyond": "Đột Phá",
+    "learn_more": "Tìm Hiểu Thêm",
+    "leading_corporations": "Các Tập Đoàn Hàng Đầu",
+    "partners_have": "Các Đối Tác Đã Hợp Tác Để Phát Hành",
+    "unisoft_member": "Thành Viên Unisoft Tạo Ứng Dụng Hàng Ngày",
+    "released_product": "Sản Phẩm Ứng Dụng/Trò Chơi Đã Phát Hành",
+    "download_active": "Lượt Tải, Hoạt Động Hàng Ngày",
+    "about_us": "Về Chúng Tôi",
+    "vision": "Tầm Nhìn",
+    "core_value": "Giá Trị Cốt Lõi",
+    "our_values": "Giá Trị Của Chúng Tôi",
+    "best_of_product": "Sản Phẩm Tốt Nhất",
+    "top_partners": "Đối Tác Hàng Đầu",
+    "push_for_speed": "Thúc đẩy tốc độ",
+    "take_risks": "Chấp nhận rủi ro",
+    "share_accept_feedback": "Chia sẻ & Chấp nhận phản hồi",
+    "fight_politics": "Chống lại những điều không minh bạch & chính trị",
+    "set_the_highest_standards": "Đặt tiêu chuẩn cao nhất",
+    "act_like_an_owner": "Hành động như một chủ sở hữu",
+    "disrupt_the_status_quo": "Phá vỡ hiện trạng",
+    "put_the_company": "Đặt lợi ích của công ty lên hàng đầu",
+    "think_big": "Nghĩ lớn",
+    "think_long_term": "Nghĩ dài hạn"
+  },
+  "about": {
+    "we_are": "Chúng Tôi Là Unisoft!",
+    "unisoft_was": "Unisoft được thành lập vào năm 2023, bắt đầu từ một đội ngũ nhỏ nhưng đam mê với những ước mơ lớn trở thành một Tập Đoàn Công Nghệ hàng đầu tại Việt Nam. Sau hành trình 5 năm đầy thử nghiệm, chúng tôi vẫn kiên định với Tầm Nhìn Công Nghệ của mình khi chúng tôi cố gắng tạo ra những trải nghiệm thú vị cho hàng tỷ người dùng trên toàn thế giới. Chúng tôi đang ngày càng tiến gần hơn đến việc đạt được Tầm Nhìn đó mỗi ngày. Chúng tôi là những chiến binh và sẽ chiến đấu với công nghệ tuyệt vời và tinh thần chiến binh!",
+    "core_value": "Giá Trị Cốt Lõi",
+    "our": "Của Chúng Tôi",
+    "vision": "Tầm Nhìn",
+    "we_aim_to": "Chúng tôi đặt mục tiêu trở thành một trong những người dẫn đầu trong ngành bằng cách tạo ra những trải nghiệm chân thành cho người dùng của chúng tôi với các sản phẩm chất lượng và hợp thời. Ngoài ra, chúng tôi tiếp tục là một người bạn đồng hành đáng tin cậy bằng cách mang lại giá trị và sự công bằng trong mối quan hệ giữa chúng tôi và các đối tác của chúng tôi.",
+    "mision": "Sứ Mệnh",
+    "delight_billions": "Mang lại niềm vui cho hàng tỷ người dùng trên toàn thế giới với những trải nghiệm xuất sắc bằng cách tạo ra các sản phẩm công nghệ hàng đầu thâm nhập vào mọi khía cạnh của cuộc sống con người.",
+    "ambition": "Tham Vọng",
+    "think_big": "Nghĩ Lớn",
+    "creation": "Sáng Tạo",
+    "autonomy": "Tự Chủ",
+    "respect": "Tôn Trọng",
+    "home_about": "Trang Chủ / Giới thiệu"
+  },
+  "careers": {
+    "competitive_salary": "Lương Cạnh Tranh",
+    "profit_sharing": "Chia Sẻ Lợi Nhuận",
+    "promotion_path": "Lộ Trình Thăng Tiến",
+    "performance_management": "Quản Lý Hiệu Suất",
+    "society_passion": "Đam Mê Cộng Đồng",
+    "welfare": "Phúc Lợi",
+    "culture_of_thinking": "Văn Hóa Tư Duy",
+    "working_equipment": "Trang Thiết Bị Làm Việc",
+    "top_position": "Vị Trí Hàng Đầu",
+    "salary": "Mức Lương:",
+    "expiration_date": "Expiration date:",
+    "view_jd": "Xem JD >",
+    "be_a_part": "Trở Thành Một Phần Của Unisoft",
+    "get_your_chance": "Nắm bắt cơ hội làm việc với những người sáng tạo và cùng chí hướng và cùng nhau chúng ta nâng tầm thế giới.",
+    "join_with_us": "Tham Gia Với Chúng Tôi",
+    "home_careers": "Trang Chủ / Tuyển dụng"
+  },
+  "contact": {
+    "home_contact": "Trang Chủ / Liên Hệ",
+    "contact_with": "Liên Hệ Với",
+    "unisoft": "Unisoft",
+    "contact_information": "Thông Tin Liên Hệ",
+    "say_something": "Nói gì đó để bắt đầu một cuộc trò chuyện trực tiếp!",
+    "email": "Email:",
+    "mobile": "Di Động:",
+    "address": "Địa Chỉ:",
+    "send": "Gửi"
+  },
+  "footer": {
+    "email": "Email:",
+    "mobile": "Di Động:",
+    "address": "Địa Chỉ:"
+  }
 }

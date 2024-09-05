@@ -1,15 +1,6 @@
-import i18n from "i18next";
-import { useTranslation } from "react-i18next";
-import '@/app/i18n';
+'use client'
 
 function Header ({urlImage, title, descript}: {urlImage: any, title: any, descript: any}) {
-  const { t } = useTranslation();
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem('language', lng);
-  };
-
   return (
     <div className="relative">
       <img src={urlImage} alt="Background" className="lg:w-full lg:h-full object-cover" />
