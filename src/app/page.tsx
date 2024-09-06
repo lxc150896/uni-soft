@@ -143,26 +143,81 @@ export default function Home() {
       {/* image tag */}
       <div className="flex flex-wrap justify-center gap-14 mt-14 h-full 2xl:px-10">
         <div className="w-full lg:w-5/12 group">
-          <div className="relative">
-            <img src="/images/tag1-main.png" alt="About Us" className="lg:w-full w-11/12 mx-auto h-auto rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:brightness-125 brightness-75" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg transition-opacity duration-300 group-hover:bg-opacity-0">
-              <h3 className="text-white text-3xl font-bold">{t('home.about_us')}</h3>
+          <div className="relative group">
+            <img 
+              src="/images/tag1-main.png" 
+              alt="About Us" 
+              className="lg:w-full w-11/12 mx-auto h-auto rounded-lg shadow-md transition-transform duration-300 brightness-75" 
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center rounded-lg">
+              <div className="w-full h-full px-[8%] flex flex-col items-center justify-center transition-all duration-300 group-hover:translate-y-[-20%] mt-[30%]">
+                {/* Text hiện tại */}
+                <h3 className="text-white 2xl:text-5xl xl:text-4xl text-3xl font-bold transition-all duration-300">
+                  {t('home.about_us')}
+                </h3>
+                {/* Text mới sẽ hiển thị khi hover */}
+                <p className="text-center text-white 2xl:text-xl lg:text-lg text-sm opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 xl:mt-10 mt-6">
+                  {t('home.tag_1')}
+                </p>
+                <div className="flex justify-center items-center 2xl:mt-28 xl:mt-24 mt-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <button className="2xl:py-6 2xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-green-400 rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] font-semibold flex items-center duration-300 hover:scale-105 hover:brightness-125">
+                    {t('home.learn_more')}
+                    <svg className="ml-3 lg:w-[18px] lg:h-[19px] w-3 h-3" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 17.5L16.9995 1.5M16.9995 1.5H2.53267M16.9995 1.5V15.3378" stroke="white" strokeWidth="2"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="w-full md:w-1/2 lg:w-5/12 flex flex-col justify-between">
           <div className="relative group">
-            <img src="/images/tag2-main.png" alt="Vision" className="lg:w-full w-11/12 mx-auto h-auto rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:brightness-100 brightness-75" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg transition-opacity duration-300 group-hover:bg-opacity-0">
-              <h3 className="text-white text-3xl font-bold">{t('home.vision')}</h3>
+            <img src="/images/tag2-main.png" alt="Vision" className="lg:w-full w-11/12 mx-auto h-auto rounded-lg shadow-md transition-transform duration-300 brightness-75" />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center rounded-lg">
+              <div className="w-full h-full px-[8%] flex flex-col items-center justify-center transition-all duration-300 group-hover:translate-y-[-45%] lg:mt-[45%] mt-[35%]">
+                {/* Text hiện tại */}
+                <h3 className="text-white 2xl:text-5xl xl:text-4xl text-3xl font-bold transition-all duration-300">
+                  {t('home.vision')}
+                </h3>
+                {/* Text mới sẽ hiển thị khi hover */}
+                <p className="text-center text-white 2xl:text-xl lg:text-lg text-sm opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 xl:mt-4 mt-2"
+                  dangerouslySetInnerHTML={{ __html: t('home.tag_2') }}>
+                </p>
+                <div className="flex justify-center items-center 2xl:mt-12 xl:mt-10 mt-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <button className="2xl:py-6 2xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-green-400 rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] font-semibold flex items-center duration-300 hover:scale-105 hover:brightness-125">
+                    {t('home.learn_more')}
+                    <svg className="ml-3 lg:w-[18px] lg:h-[19px] w-3 h-3" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 17.5L16.9995 1.5M16.9995 1.5H2.53267M16.9995 1.5V15.3378" stroke="white" strokeWidth="2"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="relative mt-6 flex-grow flex items-end group">
-            <img src="/images/tag3-main.png" alt="Core & Value" className="lg:w-full w-11/12 mx-auto h-auto rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:brightness-100 brightness-75" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg transition-opacity duration-300 group-hover:bg-opacity-0">
-              <h3 className="text-white text-3xl font-bold">{t('home.core_value')}</h3>
+            <img src="/images/tag3-main.png" alt="Core & Value" className="lg:w-full w-11/12 mx-auto h-auto rounded-lg shadow-md transition-transform duration-300 brightness-75" />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center rounded-lg">
+              <div className="w-full h-full xl:px-[8%] px-4 flex flex-col items-center justify-center transition-all duration-300 group-hover:translate-y-[-45%] xl:mt-[45%] lg:mt-[50%] mt-[40%]">
+                {/* Text hiện tại */}
+                <h3 className="text-white 2xl:text-5xl xl:text-4xl text-3xl font-bold transition-all duration-300">
+                  {t('home.core_value')}
+                </h3>
+                {/* Text mới sẽ hiển thị khi hover */}
+                <p className="text-center text-white 2xl:text-xl lg:text-lg text-sm opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 xl:mt-4 mt-2">
+                  {t('home.tag_3')}
+                </p>
+                <div className="flex justify-center items-center 2xl:mt-12 xl:mt-10 mt-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <button className="2xl:py-6 2xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-green-400 rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] font-semibold flex items-center duration-300 hover:scale-105 hover:brightness-125">
+                    {t('home.learn_more')}
+                    <svg className="ml-3 lg:w-[18px] lg:h-[19px] w-3 h-3" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 17.5L16.9995 1.5M16.9995 1.5H2.53267M16.9995 1.5V15.3378" stroke="white" strokeWidth="2"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -10,12 +10,9 @@ export default function Home() {
   const { t } = useTranslation();
 
   const values = [
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
-    { title: '[ Unisoft Product] Android Developer', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/09/2024'  },
+    { title: '[ Unisoft Product] Developer Android All Level', local: 'Ha Noi', salary: 'Up to 1500$', date: '10/10/2024', link: 'https://docs.google.com/document/d/1ckyABjmBygErxtockROKL4oSlE8jsg4Rg9hYwDOf5X8/edit' },
+    { title: '[ Unisoft Product] Developer Swift Junior', local: 'Ha Noi', salary: 'Up to 1500$', date: '10/10/2024', link: 'https://docs.google.com/document/d/1bjUCd15T5nukIyvcHhxkiUW7rFDzPe7fIukvO1bEXlw/edit' },
+    { title: '[ Unisoft Product] Performance Marketing Specialist - User Acquisition', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/10/2024', link: 'https://docs.google.com/document/d/1vGZB22uaI2hErUfx8JTS6iSvIsLZaCAQ2Fua-dnyshk/edit?pli=1' },
   ];
 
   const salarys = [
@@ -41,19 +38,27 @@ export default function Home() {
         <div className="md:mb-12 mb-6">
           <h2 className="text-center lg:text-[56px] md:text-3xl text-xl font-bold md:mb-20 mb-10">{t('careers.top_position')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {/* Example card */}
             {values.map((value, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-800 text-white rounded-lg shadow-md"
+                className="p-6 bg-gray-800 text-white rounded-lg shadow-md flex flex-col justify-between"
               >
-                <h3 className="md:text-2xl text-lg font-semibold md:mb-4 mb-2">{value.title}</h3>
-                <div className="flex items-center md:text-base md:mb-4 text-sm md-3">
-                  <img src="/images/footer_icon_map.png" alt="Logo" className="lg:w-10 w-6" />: {value.local}
+                <div>
+                  <h3 className="md:text-2xl text-lg font-semibold md:mb-4 mb-2">{value.title}</h3>
+                  <div className="flex items-center md:text-base md:mb-4 text-sm md-3">
+                    <img src="/images/footer_icon_map.png" alt="Logo" className="lg:w-10 w-6" />: {value.local}
+                  </div>
+                  <p className="md:text-base md:mb-4 text-sm md-3">{t('careers.salary')} {value.salary}</p>
+                  <p className="md:text-base md:mb-4 text-sm md-3">{t('careers.expiration_date')} {value.date}</p>
                 </div>
-                <p className="md:text-base md:mb-4 text-sm md-3">{t('careers.salary')} {value.salary}</p>
-                <p className="md:text-base md:mb-4 text-sm md-3">{t('careers.expiration_date')} {value.date}</p>
-                <p className="md:text-base md:mb-4 text-sm md-3 text-blue-500">{t('careers.view_jd')}</p>
+                <a
+                  className="md:text-base text-sm text-blue-500 mt-auto"
+                  href={value.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t('careers.view_jd')}
+                </a>
               </div>
             ))}
           </div>
