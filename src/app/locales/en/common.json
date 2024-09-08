@@ -30,11 +30,33 @@
     "disrupt_the_status_quo": "Disrupt the status quo",
     "put_the_company": "Put the company’s interest first",
     "think_big": "Think Big",
-    "think_long_term": "Think long-term"
+    "think_long_term": "Think long-term",
+    "tag_1": "Starting from a small but passionate team with big dreams , thinking big in the field of Technology",
+    "tag_2": "Big Thinking-Innovation<br/>Respect-Beyond <br/>Act like an owner",
+    "tag_3": "Become No 1 Technological Corporation in Vietnam, striving to reach to the world level by delighting billions of users all over the world with exceptional experiences",
+    "app": {
+      "live_wallpaper": "Live Wallpaper",
+      "piano_learn": "Piano Learn- Piano Keyboard",
+      "cast_to_tv": "Cast to TV- Screen Mirroring",
+      "tv_remote": "TV Remote ChromeCast to TV",
+      "beauty_camera": "Beauty Camera Photo Editor",
+      "document_reader": "Document Reader File Viewer",
+      "flashlight_find": "Flashlight- Find my phone",
+      "dj_mixer": "DJ Mixer- Beat Maker",
+      "volume_booster": "Volume Booster Sound Equalizer",
+      "phone_tracker": "Phone Tracker  Gps Map",
+      "ar_sketch": "AR Sketch- Draw Animation",
+      "voice_changer": "Voice Changer Mp3 Maker"
+    },
+    "dowload": "Downloads",
+    "experience": "Experience our app",
+    "discover_the_awesome": "Discover the awesome apps we built with our passion.<br/>We are constantly making our apps so you will be entertained for your lifetime!",
+    "show_more": "Show more",
+    "show_less": "Show less"
   },
   "about": {
     "we_are": "We are Unisoft!",
-    "unisoft_was": "Unisoft was founded in 2023, starting from a small but passionate team with big dreams to become a top Technological Corporation in Vietnam. After a 5-year journey full of experiments, we remain steadfast with our Technology Vision as we strive to create exciting experiences for billions of users around the world. We are getting closer to achieving that Vision day by day. We are warriors and will fight with great technology and a warrior spirit!",
+    "unisoft_was": "Unisoft was founded in 2023, starting from a small but passionate team with big dreams to become on top Technological Corporation in Vietnam. After a 5-year journey full of experiments, we remains steadfast with our Technology Vision as we strive to create exciting experiences for billions of users around the world. We are getting closer to achieving that Vision day by day. We are warriors and will fight with great technology and a warrior spirit!",
     "core_value": "Core Values",
     "our": "Our",
     "vision": "Vision",
@@ -63,7 +85,10 @@
     "be_a_part": "Be a part of Unisoft",
     "get_your_chance": "Get your chance to work with creative and like-minded people and together we empower the world.",
     "join_with_us": "Join with Us",
-    "home_careers": "Home / Careers"
+    "home_careers": "Home / Careers",
+    "life": "Life at Unisoft",
+    "related_jobs": "Related Jobs",
+    "apply_job": "Apply Job Now"
   },
   "contact": {
     "home_contact": "Home / Contact",
@@ -74,11 +99,26 @@
     "email": "Email:",
     "mobile": "Mobile:",
     "address": "Address:",
-    "send": "Send"
+    "send": "Send",
+    "upload_cv": "Upload your CV here (PDF only)",
+    "placeholder": {
+      "name": "Enter your name",
+      "email": "Enter your email",
+      "phone": "Enter your phone number",
+      "message": "Enter your message"
+    }
   },
   "footer": {
     "email": "Email:",
     "mobile": "Mobile:",
     "address": "Address:"
+  },
+  "toast": {
+    "upload_cv_success": "Send CV successfully!",
+    "upload_cv_error": "Send CV failed!",
+    "no_file_selected": "No file selected!"
+  },
+  "validate": {
+    "required": "This field is required!"
   }
 }

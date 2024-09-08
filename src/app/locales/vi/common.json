@@ -31,9 +31,28 @@
     "put_the_company": "Đặt lợi ích của công ty lên hàng đầu",
     "think_big": "Nghĩ lớn",
     "think_long_term": "Nghĩ dài hạn",
-    "tag_1": "Starting from a small but passionate team with big dreams , thinking big in the field of Technology",
-    "tag_2": "Big Thinking-Innovation<br/>Respect-Beyond <br/>Act like an owner",
-    "tag_3": "Become No 1 Technological Corporation in Vietnam, striving to reach to the world level by delighting billions of users all over the world with exceptional experiences"
+    "tag_1": "Khởi nghiệp từ một đội ngũ nhỏ nhưng đầy nhiệt huyết với những ước mơ lớn, suy nghĩ lớn trong lĩnh vực Công nghệ",
+    "tag_2": "Suy nghĩ lớn - Đổi mới<br/>Tôn trọng - Vượt xa <br/>Hành động như một người chủ",
+    "tag_3": "Trở thành Tập đoàn công nghệ số 1 tại Việt Nam, phấn đấu vươn tầm thế giới bằng cách mang đến cho hàng tỷ người dùng trên toàn thế giới những trải nghiệm đặc biệt",
+    "app": {
+      "live_wallpaper": "Hình nền động",
+      "piano_learn": "Học piano - Bàn phím piano",
+      "cast_to_tv": "Truyền đến TV - Phản chiếu màn hình",
+      "tv_remote": "Điều khiển từ xa ChromeCast đến TV",
+      "beauty_camera": "Beauty Camera Photo Editor",
+      "document_reader": "Trình xem tệp Document Reader",
+      "flashlight_find": "Đèn pin - Tìm điện thoại của tôi",
+      "dj_mixer": "DJ Mixer - Beat Maker",
+      "volume_booster": "Bộ cân bằng âm lượng tăng âm lượng",
+      "phone_tracker": "Bản đồ GPS theo dõi điện thoại",
+      "ar_sketch": "Phác thảo AR - Vẽ hoạt hình",
+      "voice_changer": "Trình tạo Mp3 thay đổi giọng nói"
+    },
+    "dowload": "Tải xuống",
+    "experience": "Trải nghiệm ứng dụng của chúng tôi",
+    "discover_the_awesome": "Khám phá những ứng dụng tuyệt vời mà chúng tôi đã xây dựng bằng niềm đam mê của mình.<br/>Chúng tôi liên tục tạo ra các ứng dụng để bạn được giải trí suốt đời!",
+    "show_more": "Xem thêm",
+    "show_less": "Thu gọn"
   },
   "about": {
     "we_are": "Chúng Tôi Là Unisoft!",
@@ -67,7 +86,10 @@
     "be_a_part": "Trở Thành Một Phần Của Unisoft",
     "get_your_chance": "Nắm bắt cơ hội làm việc với những người sáng tạo và cùng chí hướng và cùng nhau chúng ta nâng tầm thế giới.",
     "join_with_us": "Tham Gia Với Chúng Tôi",
-    "home_careers": "Trang Chủ / Tuyển dụng"
+    "home_careers": "Trang Chủ / Tuyển dụng",
+    "life": "Cuộc sống tại Unisoft",
+    "related_jobs": "Công việc liên quan",
+    "apply_job": "Ứng tuyển ngay"
   },
   "contact": {
     "home_contact": "Trang Chủ / Liên Hệ",
@@ -78,11 +100,26 @@
     "email": "Email:",
     "mobile": "Di Động:",
     "address": "Địa Chỉ:",
-    "send": "Gửi"
+    "send": "Gửi",
+    "upload_cv": "Chọn CV (chỉ PDF)",
+    "placeholder": {
+      "name": "Nhập tên của bạn",
+      "email": "Nhập email của bạn",
+      "phone": "Nhập số điện thoại của bạn",
+      "message": "Nhập tin nhắn của bạn"
+    }
   },
   "footer": {
     "email": "Email:",
     "mobile": "Di Động:",
     "address": "Địa Chỉ:"
+  },
+  "toast": {
+    "upload_cv_success": "Gửi CV thành công!",
+    "upload_cv_error": "Gửi CV thất bại!",
+    "no_file_selected": "Chưa chọn CV!"
+  },
+  "validate": {
+    "required": "Trường này là bắt buộc!"
   }
 }

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import '@/app/i18n';
 import { Footer } from "@/components/Footer";
 import { Menu } from "@/components/Header/Menu";
+import { useState } from "react";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -23,17 +24,17 @@ export default function Home() {
 
   const products = [
     {
-      icon: <img src="/images/product_icon_1.png" className="xl:w-full lg:w-16 w-14" />,
+      icon: <img src="/images/product_icon_1.png" className="xl:w-[86px] lg:w-14 sm:w-10 w-8" />,
       title: 'Tools',
       image: '/images/product_img_1.png',
     },
     {
-      icon: <img src="/images/product_icon_2.png" className="xl:w-full lg:w-16 w-14"/>,
+      icon: <img src="/images/product_icon_2.png" className="xl:w-[86px] lg:w-14 sm:w-10 w-8"/>,
       title: 'Personalization',
       image: '/images/product_img_2.png',
     },
     {
-      icon: <img src="/images/product_icon_3.png" className="xl:w-full lg:w-16 w-14"/>,
+      icon: <img src="/images/product_icon_3.png" className="xl:w-[86px] lg:w-14 sm:w-10 w-8"/>,
       title: 'Music & Audio',
       image: '/images/product_img_3.png',
     },
@@ -50,6 +51,44 @@ export default function Home() {
     { icon: <img src="/images/partner_8.png" />},
     { icon: <img src="/images/partner_9.png" />},
   ]
+
+  const apps_not_show = [
+    { title: t('home.app.live_wallpaper'), image: '/images/app_1.png' },
+    { title: t('home.app.piano_learn'), image: '/images/app_2.png' },
+    { title: t('home.app.cast_to_tv'), image: '/images/app_3.png' },
+    { title: t('home.app.tv_remote'), image: '/images/app_4.png' },
+  ]
+
+  const apps_show = [
+    { title: t('home.app.beauty_camera'), image: '/images/app_5.png' },
+    { title: t('home.app.document_reader'), image: '/images/app_6.png' },
+    { title: t('home.app.flashlight_find'), image: '/images/app_7.png' },
+    { title: t('home.app.dj_mixer'), image: '/images/app_8.png' },
+    { title: t('home.app.volume_booster'), image: '/images/app_9.png' },
+    { title: t('home.app.phone_tracker'), image: '/images/app_10.png' },
+    { title: t('home.app.ar_sketch'), image: '/images/app_11.png' },
+    { title: t('home.app.voice_changer'), image: '/images/app_12.png' },
+  ]
+
+  const cards = [
+    { title: t('home.partners_have'), number: '20+', icon: '/images/leading.png' },
+    { title: t('home.unisoft_member'), number: '20+', icon: '/images/leading_1.png' },
+    { title: t('home.released_product'), number: '100+', icon: '/images/leading_2.png' },
+    { title: t('home.download_active'), number: '100M+', icon: '/images/leading_3.png' },
+  ]
+
+  const [apps, setApps] = useState(apps_not_show);
+  const [isShow, setIsShow] = useState(false);
+
+  const setAppsShow = () => {
+    if (!isShow) {
+      setApps(apps_not_show.concat(apps_show));
+    } else {
+      setApps(apps_not_show);
+    }
+
+    setIsShow(!isShow);
+  }
   
   return (
     <div className="bg-black text-white min-h-screen">
@@ -69,16 +108,15 @@ export default function Home() {
               <img src="/images/global.png" alt="Background" className="absolute right-0 rotate-image 2xl:mr-[3%] mr-[2%] 2xl:w-[35%] md:w-[38%] w-[34%]" />
             {/* </div> */}
 
-            <div className="py-2 xl:px-24 lg:px-16 md:py-8 px-10">
-              <h1 className="2xl:text-[85px] xl:text-7xl lg:text-5xl md:text-4xl font-bold 2xl:leading-snug xl:leading-normal lg:leading-snug md:leading-snug">
+            <div className="px-[5%] py-[5%]">
+              <h1 className="2xl:text-[85px] xl:text-7xl lg:text-6xl md:text-4xl sm:text-2xl font-bold 2xl:leading-snug xl:leading-normal lg:leading-snug md:leading-snug">
                 <p>{t('home.innovation')}</p>
-                <div className="xl:px-24 lg:px-16 md:px-10 px-4">{t('home.creativity')}
-                  <p className="xl:px-28 lg:px-20 md:px-16 px-8">{t('home.go_beyond')}</p>
-                </div>
+                <div className="px-[8%]">{t('home.creativity')}</div>
+                <p className="px-[16%]">{t('home.go_beyond')}</p>
               </h1>
             </div>
 
-            <div className="flex justify-center items-center md:mt-12 mt-auto">
+            <div className="flex justify-center items-center xl:mt-0 md:mt-12 mt-auto">
               <button className="xl:py-6 xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-green-400 rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] font-semibold flex items-center duration-300 hover:scale-105 hover:brightness-125">
               {t('home.learn_more')}
                 <svg className="ml-3 lg:w-[18px] lg:h-[19px] w-3 h-3" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,46 +135,28 @@ export default function Home() {
 
       {/* Leading Corporations Section */}
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 2xl:gap-12 xl:gap-4 md:gap-6 gap-1 mt-6 lg:mt-12 xl:mt-24 mb-9">
-          {/* Card 1 */}
-          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto 2xl:w-[300px] 2xl:h-[500px] xl:w-[265px] xl:h-[446px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
-              style={{ backgroundImage: "url('/images/tag.png')", backgroundSize: "100%" }}>
-            <div className="rounded-full mb-4 lg:mb-9">
-              <img src="/images/leading.png" alt="leading" className="w-14 xl:w-20 lg:w-16 mx-auto" />
+        <div className="grid grid-cols-2 sm:grid-cols-4 xl:gap-12 lg:gap-6 sm:gap-4 gap-4 mt-14">
+          {/* Cards */}
+          {cards.map((card, index) => (
+            <div key={index} className="relative w-full">
+              <img
+                src="/images/tag.png"
+                alt="Best of Products Background"
+                className="inset-0 object-cover z-0 w-full"
+              />
+    
+              {/* Nội dung chính */}
+              <div className="absolute inset-0 xl:mt-6 md:mt-2 mt-1 md:p-4 sm:p-1 p-4">
+                <div key={index} className="text-center">
+                  <div className="rounded-full mb-4 lg:mb-9">
+                    <img src={card.icon} alt="leading" className="w-12 xl:w-20 lg:w-16 mx-auto" />
+                  </div>
+                  <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">{card.number}</h2>
+                  <p className="mt-8 lg:mt-9 md:text-[18px] xl:text-[24px] sm:text-xs text-lg lg:leading-10 leading-6">{card.title}</p>
+                </div>
+              </div>
             </div>
-            <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">20+</h2>
-            <p className="leading-6 lg:leading-10 mt-8 lg:mt-9 text-lg xl:text-2xl">{t('home.partners_have')}</p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto 2xl:w-[300px] 2xl:h-[500px] xl:w-[265px] xl:h-[446px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
-              style={{ backgroundImage: "url('/images/tag.png')", backgroundSize: "100%" }}>
-            <div className="rounded-full mb-4 lg:mb-9">
-              <img src="/images/leading_1.png" alt="leading" className="w-14 xl:w-20 lg:w-16 mx-auto" />
-            </div>
-            <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">20+</h2>
-            <p className="leading-6 lg:leading-10 mt-8 lg:mt-9 text-lg xl:text-2xl">{t('home.unisoft_member')}</p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto 2xl:w-[300px] 2xl:h-[500px] xl:w-[265px] xl:h-[446px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
-              style={{ backgroundImage: "url('/images/tag.png')", backgroundSize: "100%" }}>
-            <div className="rounded-full mb-4 lg:mb-9">
-              <img src="/images/leading_2.png" alt="leading" className="w-14 xl:w-20 lg:w-16 mx-auto" />
-            </div>
-            <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">100+</h2>
-            <p className="leading-6 lg:leading-10 mt-8 lg:mt-9 text-lg xl:text-2xl">{t('home.released_product')}</p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="bg-gray-900 p-6 md:p-2 lg:p-3 xl:p-9 rounded-lg text-center duration-300 hover:scale-105 hover:brightness-125 mx-auto 2xl:w-[300px] 2xl:h-[500px] xl:w-[265px] xl:h-[446px] lg:w-[200px] lg:h-[335px] md:w-[165px] md:h-[261px] w-full"
-              style={{ backgroundImage: "url('/images/tag.png')", backgroundSize: "100%" }}>
-            <div className="rounded-full mb-4 lg:mb-9">
-              <img src="/images/leading_3.png" alt="leading" className="w-14 xl:w-20 lg:w-16 mx-auto" />
-            </div>
-            <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">100M+</h2>
-            <p className="leading-6 lg:leading-10 mt-8 lg:mt-9 text-lg xl:text-2xl">{t('home.download_active')}</p>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -227,7 +247,7 @@ export default function Home() {
       <div className="container mx-auto">
       <div className="bg-black text-white lg:pt-36 pt-12 lg:mb-24 mb-12">
         <h2 className="xl:text-5xl lg:text-4xl text-lg font-bold text-center text-blue-500 lg:mb-24 mb-12">{t('home.our_values')}</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-20 2xl:gap-y-28 xl:px-1 lg:px-8 mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 sm:gap-y-20 2xl:gap-y-28 gap-y-12 xl:px-1 lg:px-8 mx-auto">
           {values.map((value, index) => (
             <div key={index} className="flex flex-col items-center duration-300 hover:scale-110 hover:brightness-100">
               <div>{value.icon}</div>
@@ -240,43 +260,83 @@ export default function Home() {
 
       {/* products */}
       <h2 className="xl:text-5xl lg:text-4xl text-lg font-bold text-center text-blue-500 xl:pt-14 lg:pt-4 pt-2">
-      {t('home.best_of_product')}
+        {t('home.best_of_product')}
       </h2>
-      <div className="text-white relative xl:p-20 lg:p-10 p-4">
+      <div className="text-white relative xl:pt-20 lg:pt-10 pt-4 relative ">
         {/* Thẻ cha sẽ có chiều cao bằng chiều ngang của ảnh */}
-        <div className="relative w-full aspect-square">
+        <div className="relative w-full">
           <img
             src="/images/best_product_bg.png"
             alt="Best of Products Background"
-            className="absolute inset-0 object-cover z-0 w-full h-full"
+            className="inset-0 object-cover z-0 w-full"
           />
 
           {/* Nội dung chính */}
-          <div className="absolute inset-0 grid grid-cols-3 gap-8 max-w-6xl 2xl:max-w-7xl xl:mx-auto lg:mx-8 z-10 mt-12">
+          <div className="absolute inset-0 grid md:gap-8 gap-4 xl:mt-12 lg:mt-4 mx-[11%]">
             {products.map((product, index) => (
               <div key={index} className="text-center">
-                <div className="duration-300 hover:scale-105 hover:brightness-100">
-                  <div className="flex justify-center xl:mb-8 lg:mb-4 mb-3">
-                    <div className="rounded-full">
-                      <span>{product.icon}</span>
-                    </div>
-                  </div>
-                  <p className="xl:text-3xl lg:text-lg text-xs font-semibold xl:mb-24 lg:mb-16 mb-8">
+                <div className="flex duration-300 hover:scale-105 hover:brightness-100 items-center ">
+                  <div className="xl:mr-16 lg:mr-12 sm:mr-8 mr-4">{product.icon}</div>
+                  <p className="xl:text-2xl lg:text-lg text-xs font-semibold">
                     {product.title}
                   </p>
                 </div>
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="2xl:w-full w-72 aspect-square mx-auto rounded-lg duration-300 hover:scale-105 hover:brightness-100"
-                />
               </div>
             ))}
           </div>
         </div>
+        <div className="bg-black text-white pt-24">
+          <div className="container mx-auto">
+            {/* Tiêu đề và mô tả */}
+            <div className="flex">
+              <div className="w-4/5">
+                <h2 className="md:text-5xl text-2xl font-bold text-blue-500">{t("home.experience")}</h2>
+                <p className="md:text-xl text-xs mt-4" dangerouslySetInnerHTML={{ __html: t('home.discover_the_awesome') }}></p>
+              </div>
+
+              {/* Số liệu tải xuống */}
+              <div className="font-bold w-1/5">
+                <div className="float-right">
+                  <div className="text-blue-500 md:text-5xl text-2xl">1B+</div> <div className="md:text-xl text-sm">{t("home.dowload")}</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Grid cho các ứng dụng */}
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 ld:gap-14 sm:gap-10 gap-8 mt-14">
+              {/* App 1 */}
+              {apps.map((app, index) => (
+                <div key={index} className="flex flex-col items-center text-center group relative ">
+                  <div>
+                    <img src={app.image} alt="Live Wallpaper" className="mx-auto rounded-lg transition-opacity duration-300 group-hover:opacity-20" />
+                    <p className="mt-7 lg:text-2xl sm:text-xl text-lg font-semibold">{app.title}</p>
+                  </div>
+                  <div className="absolute object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100 mt-[20%]">
+                    <img
+                      src={app.image}
+                      alt="Small Image"
+                      className="m-auto w-[30%]"
+                    />
+                    <img
+                      src="/images/app_google.png"
+                      alt="Google Play Icon"
+                      className="mx-auto object-contain mt-7"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Nút Show more */}
+            <div className="w-full text-center item-center justify-center mt-10">
+              <button className="px-24 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded text-2xl" onClick={() => setAppsShow()}>
+                {!isShow ? t("home.show_more") : t("home.show_less")}
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="bg-black text-white container mx-auto">
+      <div className="bg-black text-white container mx-auto block mt-2">
         {/* Top Partners Section */}
         <div className="bg-black text-white pt-16 mb-24">
           <h2 className="xl:text-5xl lg:text-4xl font-bold text-center text-blue-500 mb-24">{t('home.top_partners')}</h2>

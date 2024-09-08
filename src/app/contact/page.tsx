@@ -5,12 +5,90 @@ import '@/app/i18n';
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import Banner from "@/components/Banner";
+import emailjs from 'emailjs-com';
+import { useState } from "react";
+import { uploadToDropbox } from "@/api/upload";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   const { t } = useTranslation();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [file, setFile] = useState<File | null>(null);
+
+  const [nameError, setNameError] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+  const [fileError, setFileError] = useState('');
+
+  const resetForm = () => {
+    setName('');
+    setEmail('');
+    setPhone('');
+    setMessage('');
+  }
+
+  const isValidate = () => {
+    if (!name) setNameError(t('validate.required'));
+    if (!email) setEmailError(t('validate.required'));
+    if (!phone) setPhoneError(t('validate.required'));
+    if (!file) setFileError(t('validate.required'));
+    return !name || !email || !phone;
+  }
+
+  const onSubmitEmail = async () => {
+    setLoading(true);
+    if (!process.env.NEXT_PUBLIC_SERVER_ID || !process.env.NEXT_PUBLIC_TEMPLATE_ID) {
+      setLoading(false);
+      return;
+    }
+    if (isValidate()) return;
+    if (file) {
+      const linkUpload = await uploadToDropbox(file);
+
+      if (!linkUpload) {
+        setLoading(false);
+        toast.error(t('toast.upload_cv_error'));
+        return;
+      }
+
+      const templateParams = {
+        subject: name,
+        email: email,
+        phone: phone,
+        message: message,
+        link: linkUpload
+      }
+      emailjs.send(
+        process.env.NEXT_PUBLIC_SERVER_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_USER_ID
+      ).then(function() {
+        resetForm();
+        toast.success(t('toast.upload_cv_success'));
+        setLoading(false);
+      }, function(err) {
+        toast.error(t('toast.upload_cv_error'));
+        setLoading(false);
+      });
+    } else {
+      setLoading(false);
+    }
+  }
+
+  const handleFileChange = (e: any) => {
+    setFile(e.target.files[0]);
+    setFileError('');
+  };
   
   return (
     <div className="bg-black text-white min-h-screen">
+      <ToastContainer />
       {/* Header Section */}
       <Header />
       {/* banner */}
@@ -49,15 +127,70 @@ export default function Home() {
 
             {/* Contact Form */}
             <div className="w-full md:w-3/5 bg-gray-900 md:p-8 md-0 xl:pl-16 lg:pl-12 md:pl-8 pl-0 md:pt-0 pt-4">
-              <form className="space-y-4">
-                <input type="text" placeholder="Enter your Name" className="w-full lg:p-6 md:p-4 p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <input type="email" placeholder="Enter your email" className="w-full lg:p-6 md:p-4 p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <input type="tel" placeholder="Enter your phone number" className="w-full lg:p-6 md:p-4 p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <textarea placeholder="Enter your message" className="w-full lg:h-36 md:h-28 h-20 lg:p-6 md:p-4 p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                <div className="w-full text-center">
-                  <button type="submit" className="w-9/12 lg:p-6 md:p-4 p-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600">{t('contact.send')}</button>
+              <div className="space-y-4">
+                <div>
+                  <input
+                    value={name}
+                    type="text"
+                    placeholder={t('contact.placeholder.name')}
+                    className="w-full lg:p-6 md:p-4 p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    onChange={e => { setName(e.currentTarget.value); setNameError(''); }}
+                  />
+                  <div className="text-red-500 mt-1">{nameError}</div>
                 </div>
-              </form>
+                <div>
+                  <input
+                    value={email}
+                    type="email"
+                    placeholder={t('contact.placeholder.email')}
+                    className="w-full lg:p-6 md:p-4 p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    onChange={e => { setEmail(e.currentTarget.value); setEmailError(''); }}
+                  />
+                  <p className="text-red-500 mt-1">{emailError}</p>
+                </div>
+                <div>
+                  <input
+                    value={phone}
+                    type="tel"
+                    placeholder={t('contact.placeholder.phone')}
+                    className="w-full lg:p-6 md:p-4 p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    onChange={e => { setPhone(e.currentTarget.value); setPhoneError(''); }}
+                  />
+                  <p className="text-red-500 mt-1">{phoneError}</p>
+                </div>
+                <textarea
+                  value={message}
+                  placeholder="Enter your message"
+                  className="w-full lg:h-36 md:h-28 h-20 lg:p-6 md:p-4 p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  onChange={e => { setMessage(e.currentTarget.value); }}
+                >
+                </textarea>
+                <div>
+                  <div className="w-full border-dashed border-2 border-gray-300 rounded-lg flex items-center justify-center p-5 bg-slate-100">
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="file"
+                        accept="application/pdf"
+                        className="hidden"
+                        onChange={handleFileChange}
+                      />
+                      <img 
+                        src="/images/icon_upload.png" 
+                        alt="Upload Icon" 
+                        className="w-10 h-10 mr-4"
+                      />
+                      <span className="text-gray-700 text-lg font-medium">
+                        {t('contact.upload_cv')}
+                      </span>
+                    </label>
+                    {file && <p className="text-green-500 mt-2">{file.name}</p>}
+                  </div>
+                  <p className="text-red-500 mt-1">{fileError}</p>
+                </div>
+                <div className="w-full text-center pt-3">
+                  <button type="submit" onClick={() => onSubmitEmail()} className="w-9/12 lg:p-6 md:p-4 p-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600">{t('contact.send')}</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
