@@ -177,7 +177,7 @@ export default function Home() {
                       <img 
                         src="/images/icon_upload.png" 
                         alt="Upload Icon" 
-                        className="w-10 h-10 mr-4"
+                        className="mr-4"
                       />
                       <span className="text-gray-700 text-lg font-medium">
                         {t('contact.upload_cv')}

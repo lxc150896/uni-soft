@@ -1,7 +1,7 @@
 export const android = {
-  "company": "[ Unisoft Product] Developer Android All Level",
+  "company": "[Unisoft Product] Developer Android All Level",
   "location": "Hà Nội",
-  "salary": "Up to 20.000.000",
+  "salary": "Up to $1500",
   "expirationDate": "31/08/2024",
   "applyUrl": "https://apply.joblink.com/unisoft-graphic-designer",
   "jobDescription": [
@@ -34,8 +34,8 @@ export const android = {
   "applyInstructions": {
     "content": [
       "💌 Ứng viên gửi CV về email: team.hr@unisoftstudio.com",
-      "➡Hotline: 0838825268 | Mrs. Hà",
-      "➡Văn phòng UniSoft: Tầng 6 tòa Up Office, số 9 Ngõ 75 Trần Thái Tông, Cầu Giấy, Hà Nội",
+      "➡️ Hotline: 0838825268 | Mrs. Hà",
+      "➡️ Văn phòng UniSoft: Tầng 6 tòa Up Office, số 9 Ngõ 75 Trần Thái Tông, Cầu Giấy, Hà Nội",
       "Page Công ty: https://www.facebook.com/unisoftgobeyond"
     ],
     "note": "Liên hệ văn phòng từ 9h30-18h00 từ thứ 2 đến thứ 6."

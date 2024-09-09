@@ -1,5 +1,5 @@
 export const swift = {
-  "company": "[ Unisoft Product] Developer Swift Junior",
+  "company": "[Unisoft Product] Developer Swift Junior",
   "location": "Hà Nội",
   "salary": "Up to $1500",
   "expirationDate": "30/09/2024",
@@ -42,8 +42,8 @@ export const swift = {
   "applyInstructions": {
     "content": [
       "💌 Ứng viên gửi CV về email: team.hr@unisoftstudio.com",
-      "➡Hotline: 0838825268 | Mrs. Hà",
-      "➡Văn phòng UniSoft: Tầng 6 tòa Up Office, số 9 Ngõ 75 Trần Thái Tông, Cầu Giấy, Hà Nội",
+      "➡️ Hotline: 0838825268 | Mrs. Hà",
+      "➡️ Văn phòng UniSoft: Tầng 6 tòa Up Office, số 9 Ngõ 75 Trần Thái Tông, Cầu Giấy, Hà Nội",
       "Page Công ty: https://www.facebook.com/unisoftgobeyond"
     ],
     "note": "Liên hệ văn phòng từ 9h30-18h00 từ thứ 2 đến thứ 6."
