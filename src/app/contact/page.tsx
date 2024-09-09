@@ -98,7 +98,7 @@ export default function Home() {
         {/* Contact */}
         <h2 className="text-center xl:text-[56px] lg:text-4xl md:text-3xl text-xl font-bold lg:mb-20 md:mb-14 mb-8">{t('contact.contact_with')} <span className="text-blue-500">{t('contact.unisoft')}</span></h2>
         <div className="bg-black flex justify-center items-center p-4 bg-gray-900 rounded-lg">
-          <div className="w-full max-w-7xl bg-gray-800 rounded-lg shadow-lg flex flex-col md:flex-row">
+          <div className="w-full bg-gray-800 rounded-lg shadow-lg flex flex-col md:flex-row">
             {/* Contact Information */}
             <div className="w-full md:w-2/5 bg-blue-600 text-white xl:px-8 xl:py-20 lg:px-6 lg:py-14 px-4 py-8 rounded-lg">
               <h2 className="lg:text-[28px] text-lg font-semibold md:mb-2 mb-1">{t('contact.contact_information')}</h2>
