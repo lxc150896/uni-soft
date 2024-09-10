@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { getJob } from "@/api/jobs";
 import Loading from "@/components/PageLoading";
 import { IJob } from "@/api/lib/types/job";
+import Modal from "@/components/Modal";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -18,6 +19,7 @@ export default function Home() {
   const segments = pathname.split('/');
   const id = segments[segments.length - 1];
   const [jobData, setJobData] = useState<IJob>();
+  const [modalState, setModalState] = useState(false)
 
 
   const values = [
@@ -48,7 +50,7 @@ export default function Home() {
               {jobData.company}
             </h1>
             <div className="flex justify-end w-2/5 h-full">
-              <button className="top-0 xl:py-5 xl:px-10 lg:py-4 lg:px-8 md:py-3 md:px-8 sm:py-3 sm:px-4 py-2 px-2 bg-blue-500 hover:bg-blue-600 rounded xl:text-2xl lg:text-lg md:text-sm text-xs font-semibold flex items-center duration-300 hover:scale-105 hover:brightness-125">
+              <button onClick={() => setModalState(true)} className="top-0 xl:py-5 xl:px-10 lg:py-4 lg:px-8 md:py-3 md:px-8 sm:py-3 sm:px-4 py-2 px-2 bg-blue-500 hover:bg-blue-600 rounded xl:text-2xl lg:text-lg md:text-sm text-xs font-semibold flex items-center duration-300 hover:scale-105 hover:brightness-125">
                 {t('careers.apply_job')}
                 <svg className="sm:ml-3 ml-1 lg:w-[18px] lg:h-[19px] w-3 h-3" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 17.5L16.9995 1.5M16.9995 1.5H2.53267M16.9995 1.5V15.3378" stroke="white" strokeWidth="2"/>
@@ -159,6 +161,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* modal upload cv */}
+
+      {modalState && <Modal setModalState={setModalState} company={jobData?.company} /> }
 
       {/* Footer Section */}
       <Footer />

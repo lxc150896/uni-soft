@@ -101,6 +101,7 @@
     "mobile": "Di Động:",
     "address": "Địa Chỉ:",
     "send": "Gửi",
+    "sending": "Gửi...",
     "upload_cv": "Chọn CV (chỉ PDF)",
     "placeholder": {
       "name": "Nhập tên của bạn",
@@ -120,6 +121,8 @@
     "no_file_selected": "Chưa chọn CV!"
   },
   "validate": {
-    "required": "Trường này là bắt buộc!"
+    "required": "Trường này là bắt buộc!",
+    "email": "Địa chỉ email không hợp lệ!",
+    "phone": "Số điện thoại không hợp lệ!"
   }
 }

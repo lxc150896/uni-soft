@@ -1,12 +1,17 @@
 import { Dropbox } from 'dropbox';
+import { getCookie } from "cookies-next";
+import { handlerRefreshToken } from './refreshTokenDropbox';
 
 export const uploadToDropbox = async (file: any): Promise<string | null> => {
-  const accessToken = process.env.NEXT_PUBLIC_DROPBOX_ACCESS_TOKEN;
+  let accessToken = getCookie('dropbox_demo');
 
-  // Kiểm tra nếu accessToken không có giá trị
   if (!accessToken) {
-    console.error('Access Token is missing');
-    return null;
+    const data = await handlerRefreshToken();
+    if (data) {
+      accessToken = getCookie('dropbox_demo');
+    } else {
+      return null;
+    }
   }
 
   const dbx = new Dropbox({ accessToken });

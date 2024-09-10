@@ -100,6 +100,7 @@
     "mobile": "Mobile:",
     "address": "Address:",
     "send": "Send",
+    "sending": "Sending...",
     "upload_cv": "Upload your CV here (PDF only)",
     "placeholder": {
       "name": "Enter your name",
@@ -119,6 +120,8 @@
     "no_file_selected": "No file selected!"
   },
   "validate": {
-    "required": "This field is required!"
+    "required": "This field is required!",
+    "email": "Invalid email address!",
+    "phone": "Invalid phone number!"
   }
 }
