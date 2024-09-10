@@ -2,7 +2,7 @@ export const marketing = {
   "company": "[Unisoft Product] Performance Marketing Specialist - User Acquisition",
   "location": "Hà Nội",
   "salary": "Up to $1000",
-  "expirationDate": "30/09/2024",
+  "expirationDate": "10/10/2024",
   "applyUrl": "https://www.facebook.com/unisoftgobeyond",
   "jobDescription": [
     "Quản lý chiến lược và thiết lập các chiến dịch quảng cáo trên các nền tảng quảng cáo Google Adword, Facebook Ads, Search Ads, IronSource, Unity Ads.",

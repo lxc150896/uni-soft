@@ -2,7 +2,7 @@ export const android = {
   "company": "[Unisoft Product] Developer Android All Level",
   "location": "Hà Nội",
   "salary": "Up to $1500",
-  "expirationDate": "31/08/2024",
+  "expirationDate": "10/10/2024",
   "applyUrl": "https://apply.joblink.com/unisoft-graphic-designer",
   "jobDescription": [
     "Thiết kế các ấn phẩm để team Marketing chạy quảng cáo (creative) trên các nền tảng như: image ads, banner, cover, các creative ads khác cho các sản phẩm Mobile Apps",

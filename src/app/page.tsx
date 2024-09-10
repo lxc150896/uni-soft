@@ -98,26 +98,26 @@ export default function Home() {
 
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between">
           <div>
-            <div className="xl:ml-20 lg:ml-14 ml-4 xl:mr-28 lg:mr-20 mr-4 mx-auto flex justify-between items-center lg:py-8 md:py-4 py-2 h-auto">
+            <div className="xl:ml-20 xl:mr-24 lg:ml-14 ml-4 lg:mr-20 mr-4 mx-auto flex justify-between items-center lg:py-8 md:py-4 py-2 h-auto">
               <div className="flex items-center space-x-4">
-                <img src="/images/logo.png" alt="Logo" className="xl:w-24 xl:h-16 md:w-14 md:h-10 w-10 h-6" />
+                <img src="/images/logo.png" alt="Logo" className="xl:w-28 xl:h-20 md:w-14 md:h-10 w-10 h-6" />
               </div>
               <Menu />
             </div>
             {/* <div className="absolute right-0"> */}
-              <img src="/images/global.png" alt="Background" className="absolute right-0 rotate-image 2xl:mr-[3%] mr-[2%] 2xl:w-[35%] md:w-[38%] w-[34%]" />
+              <img src="/images/global.png" alt="Background" className="absolute right-0 rotate-image mt-3 2xl:mr-[2%] mr-[2%] 2xl:w-[35%] md:w-[38%] w-[34%]" />
             {/* </div> */}
 
-            <div className="px-[5%] py-[5%]">
-              <h1 className="2xl:text-[85px] xl:text-7xl lg:text-6xl md:text-4xl sm:text-2xl font-bold 2xl:leading-snug xl:leading-normal lg:leading-snug md:leading-snug">
+            <div className="px-[7%] pt-[2%]">
+              <h1 className="xl:text-[86px] lg:text-6xl md:text-4xl sm:text-2xl font-bold lg:leading-snug md:leading-snug">
                 <p>{t('home.innovation')}</p>
-                <div className="px-[8%]">{t('home.creativity')}</div>
-                <p className="px-[16%]">{t('home.go_beyond')}</p>
+                <div className="px-[7%]">{t('home.creativity')}</div>
+                <p className="px-[14%]">{t('home.go_beyond')}</p>
               </h1>
             </div>
 
-            <div className="flex justify-center items-center xl:mt-0 md:mt-12 mt-auto">
-              <button className="xl:py-6 xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-green-400 rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] font-semibold flex items-center duration-300 hover:scale-105 hover:brightness-125">
+            <div className="flex justify-center items-center mt-[5%]">
+              <button className="xl:py-6 xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-customBlue rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] flex items-center duration-300 hover:scale-105 hover:brightness-125">
               {t('home.learn_more')}
                 <svg className="ml-3 lg:w-[18px] lg:h-[19px] w-3 h-3" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 17.5L16.9995 1.5M16.9995 1.5H2.53267M16.9995 1.5V15.3378" stroke="white" strokeWidth="2"/>
@@ -126,33 +126,29 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Đoạn text Leading Corporations ở cuối */}
-          <div className="text-center xl:text-[56px] lg:text-4xl text-lg text-blue-500 font-bold">
-            {t('home.leading_corporations')}
-          </div>
+          
         </div>
+      </div>
+
+      {/* Đoạn text Leading Corporations ở cuối */}
+      <div className="xl:text-5xl lg:text-4xl text-center text-lg font-bold sm:mt-[2%] mt-0">
+        {t('home.leading_corporations')}
       </div>
 
       {/* Leading Corporations Section */}
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-4 xl:gap-12 lg:gap-6 sm:gap-4 gap-4 mt-14">
+        <div className="grid grid-cols-2 sm:grid-cols-4 xl:gap-12 lg:gap-6 sm:gap-4 gap-4 sm:mt-14 mt-10">
           {/* Cards */}
           {cards.map((card, index) => (
-            <div key={index} className="relative w-full">
-              <img
-                src="/images/tag.png"
-                alt="Best of Products Background"
-                className="inset-0 object-cover z-0 w-full"
-              />
-    
+            <div key={index} className="w-full bg-customerGray rounded-md">
               {/* Nội dung chính */}
-              <div className="absolute inset-0 xl:mt-6 md:mt-2 mt-1 md:p-4 sm:p-1 p-4">
+              <div className="inset-0 sm:pt-6 pt-4 sm:pb-10 pb-8 sm:px-5 px-3">
                 <div key={index} className="text-center">
-                  <div className="rounded-full mb-4 lg:mb-9">
-                    <img src={card.icon} alt="leading" className="w-12 xl:w-20 lg:w-16 mx-auto" />
+                  <div className="rounded-full mb-2 lg:mb-4">
+                    <img src={card.icon} alt="leading" className="w-12 xl:w-14 lg:w-12 mx-auto" />
                   </div>
-                  <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-blue-500">{card.number}</h2>
-                  <p className="mt-8 lg:mt-9 md:text-[18px] xl:text-[24px] sm:text-xs text-lg lg:leading-10 leading-6">{card.title}</p>
+                  <h2 className="text-2xl lg:text-3xl xl:text-5xl font-bold py-2">{card.number}</h2>
+                  <p className="text-white text-opacity-50 mt-3 lg:mt-4 md:text-[18px] xl:text-2xl sm:text-xs text-lg xl:leading-relaxed lg:leading-10 leading-6">{card.title}</p>
                 </div>
               </div>
             </div>
@@ -161,8 +157,8 @@ export default function Home() {
       </div>
 
       {/* image tag */}
-      <div className="flex flex-wrap justify-center gap-14 mt-14 h-full 2xl:px-10">
-        <div className="w-full lg:w-5/12 group">
+      <div className="container flex flex-wrap justify-center grid sm:grid-cols-2 grid-cols-1 gap-14 mt-14 h-full">
+        <div className="group">
           <div className="relative group">
             <img 
               src="/images/tag1-main.png" 
@@ -192,7 +188,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 lg:w-5/12 flex flex-col justify-between">
+        <div className="flex flex-col justify-between">
           <div className="relative group">
             <img src="/images/tag2-main.png" alt="Vision" className="lg:w-full w-11/12 mx-auto h-auto rounded-lg shadow-md transition-transform duration-300 brightness-75" />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center rounded-lg">
@@ -244,7 +240,7 @@ export default function Home() {
       </div>
 
       {/* Our Values */}
-      <div className="container mx-auto">
+      {/* <div className="container mx-auto">
       <div className="bg-black text-white lg:pt-36 pt-12 lg:mb-24 mb-12">
         <h2 className="xl:text-5xl lg:text-4xl text-lg font-bold text-center text-blue-500 lg:mb-24 mb-12">{t('home.our_values')}</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 sm:gap-y-20 2xl:gap-y-28 gap-y-12 xl:px-1 lg:px-8 mx-auto">
@@ -256,13 +252,13 @@ export default function Home() {
           ))}
         </div>
       </div>
-      </div>
+      </div> */}
 
       {/* products */}
-      <h2 className="xl:text-5xl lg:text-4xl text-lg font-bold text-center text-blue-500 xl:pt-14 lg:pt-4 pt-2">
+      <h2 className="xl:text-5xl lg:text-4xl text-lg font-bold text-center xl:pt-20 lg:pt-10 pt-8">
         {t('home.best_of_product')}
       </h2>
-      <div className="text-white relative xl:pt-20 lg:pt-10 pt-4 relative ">
+      <div className="text-white relative xl:pt-9 lg:pt-8 pt-4 relative ">
         {/* Thẻ cha sẽ có chiều cao bằng chiều ngang của ảnh */}
         <div className="relative w-full">
           <img
@@ -285,19 +281,19 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="bg-black text-white pt-24">
+        <div className="bg-black text-white lg:pt-24 sm:pt-20 pt-14">
           <div className="container mx-auto">
             {/* Tiêu đề và mô tả */}
             <div className="flex">
               <div className="w-4/5">
-                <h2 className="md:text-5xl text-2xl font-bold text-blue-500">{t("home.experience")}</h2>
-                <p className="md:text-xl text-xs mt-4" dangerouslySetInnerHTML={{ __html: t('home.discover_the_awesome') }}></p>
+                <h2 className="md:text-5xl text-2xl font-bold">{t("home.experience")}</h2>
+                <p className="md:text-xl text-xs mt-4 text-white text-opacity-50 mr-4" dangerouslySetInnerHTML={{ __html: t('home.discover_the_awesome') }}></p>
               </div>
 
               {/* Số liệu tải xuống */}
-              <div className="font-bold w-1/5">
+              <div className="w-1/5">
                 <div className="float-right">
-                  <div className="text-blue-500 md:text-5xl text-2xl">1B+</div> <div className="md:text-xl text-sm">{t("home.dowload")}</div>
+                  <div className="font-bold text-blue-500 md:text-5xl text-2xl">1B+</div> <div className="md:text-xl text-sm">{t("home.dowload")}</div>
                 </div>
               </div>
             </div>
@@ -309,7 +305,7 @@ export default function Home() {
                 <div key={index} className="flex flex-col items-center text-center group relative ">
                   <div>
                     <img src={app.image} alt="Live Wallpaper" className="mx-auto rounded-lg transition-opacity duration-300 group-hover:opacity-20" />
-                    <p className="mt-7 lg:text-2xl sm:text-xl text-lg font-semibold">{app.title}</p>
+                    <p className="mt-7 lg:text-2xl sm:text-xl text-lg px-1">{app.title}</p>
                   </div>
                   <div className="absolute object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100 mt-[20%]">
                     <img
@@ -327,8 +323,8 @@ export default function Home() {
               ))}
             </div>
             {/* Nút Show more */}
-            <div className="w-full text-center item-center justify-center mt-10">
-              <button className="px-24 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded text-2xl" onClick={() => setAppsShow()}>
+            <div className="w-full text-center item-center justify-center lg:mt-20 mt-10">
+              <button className="px-[105px] py-5 bg-customBlue hover:bg-blue-700 text-white rounded text-2xl" onClick={() => setAppsShow()}>
                 {!isShow ? t("home.show_more") : t("home.show_less")}
               </button>
             </div>
@@ -339,7 +335,7 @@ export default function Home() {
       <div className="bg-black text-white container mx-auto block mt-2">
         {/* Top Partners Section */}
         <div className="bg-black text-white pt-16 mb-24">
-          <h2 className="xl:text-5xl lg:text-4xl font-bold text-center text-blue-500 mb-24">{t('home.top_partners')}</h2>
+          <h2 className="xl:text-[40px] lg:text-4xl font-bold text-center mb-24">{t('home.top_partners')}</h2>
 
           {/* First set of logos */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-20 gap-x-10 lg:mx-16 lg:mx-12 mx-6 xl:mb-16 mb-10 2xl:mb-20">

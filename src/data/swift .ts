@@ -2,7 +2,7 @@ export const swift = {
   "company": "[Unisoft Product] Developer Swift Junior",
   "location": "Hà Nội",
   "salary": "Up to $1500",
-  "expirationDate": "30/09/2024",
+  "expirationDate": "10/10/2024",
   "applyUrl": "https://www.facebook.com/unisoftgobeyond",
   "jobDescription": [
     "Phát triển mới các dự án của công ty trong lĩnh vực tiện ích, giải trí.",

@@ -42,7 +42,7 @@ export default function Home() {
       {/* Header Section */}
       <Header />
 
-      <div className="mx-[5%] xl:my-28 lg:my-24 md:my-16 sm:my-10 my-6">
+      <div className="mx-[5%] xl:my-28 lg:my-24 md:my-16 sm:my-14 my-10">
         <div className="">
           {/* Tiêu đề công việc */}
           <div className="flex justify-between">

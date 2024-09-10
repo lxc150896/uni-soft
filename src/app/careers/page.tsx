@@ -34,6 +34,12 @@ export default function Home() {
     { image: '/images/about_slide_3.png' },
     { image: '/images/about_slide_4.png' },
   ]
+
+  const lifes = [
+    { title: 'Teambuilding Quý 1 /2024', image: '/images/life/event_1.png', date: 'Jun 24,2024' },
+    { title: 'Unisoft Happy Women day', image: '/images/life/event_2.png', date: 'Jun 24,2024' },
+    { title: 'Unisoft x Applovin Event', image: '/images/life/event_3.png', date: 'Jun 24,2024' },
+  ]
   
   return (
     <div className="bg-black text-white min-h-screen">
@@ -42,10 +48,10 @@ export default function Home() {
       {/* banner */}
       <Banner urlImage="/images/careers_bg.png" title={t('menu.careers')} descript={t('careers.home_careers')} />
 
-      <div className="container mx-auto md:my-14 my-0 xl:pt-16 pt-4">
+      <div className="container mx-auto xl:pt-12 pt-4">
         {/* Top Position */}
-        <div className="md:mb-12 mb-6">
-          <h2 className="text-center lg:text-[56px] md:text-3xl text-xl font-bold md:mb-20 mb-10">{t('careers.top_position')}</h2>
+        <div className="md:mb-16 mb-6">
+          <h2 className="text-center lg:text-5xl md:text-3xl text-xl font-bold md:mb-20 mb-10">{t('careers.top_position')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {values.map((value, index) => (
               <div
@@ -53,15 +59,15 @@ export default function Home() {
                 className="p-6 bg-gray-800 text-white rounded-lg shadow-md flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="md:text-xl text-lg font-semibold md:mb-4 mb-2">{value.title}</h3>
-                  <div className="flex items-center md:text-base md:mb-4 mb-2 text-sm md-3">
+                  <h3 className="md:text-xl text-lg font-semibold md:mb-3 mb-2">{value.title}</h3>
+                  <div className="flex items-center md:text-base md:mb-3 mb-2 text-sm md-3">
                     <img src="/images/footer_icon_map.png" alt="Logo" className="lg:w-10 w-6" />: {value.local}
                   </div>
-                  <p className="md:mb-4 mb-2">
+                  <p className="md:mb-3 mb-2">
                     <span className="md:text-base text-sm md-3">{t('careers.salary')} </span><span className="font-bold">{value.salary}</span>
                   </p>
-                  <p className="md:mb-4 mb-2">
-                    <span className="md:text-base md:mb-4 text-sm md-3">{t('careers.expiration_date')} </span><span className="font-bold">{value.date}</span>
+                  <p className="md:mb-3 mb-2">
+                    <span className="md:text-base md:mb-3 text-sm md-3">{t('careers.expiration_date')} </span><span className="font-bold">{value.date}</span>
                   </p>
                 </div>
                 <p
@@ -77,9 +83,9 @@ export default function Home() {
         </div>
 
         {/* Be a part of Unisoft */}
-        <div className="md:mt-32 mt-16 text-center">
-          <h2 className="lg:text-[56px] md:text-3xl text-xl font-bold lg:mb-8 mb-4">{t('careers.be_a_part')}</h2>
-          <p className="md:text-2xl text-base md:mb-24 mb-16">
+        <div className="md:mt-16 mt-12 text-center">
+          <h2 className="lg:text-5xl md:text-3xl text-xl font-bold lg:mb-8 mb-4">{t('careers.be_a_part')}</h2>
+          <p className="md:text-2xl text-base md:mb-16 mb-12 text-white text-opacity-50 px-[15%]">
             {t('careers.get_your_chance')}
           </p>
           
@@ -95,58 +101,38 @@ export default function Home() {
 
         {/* Join with Us */}
         <div className="text-center md:mt-24 mt-12 md:my-14 my-6 md:mb-40 mb-16">
-          <h2 className="lg:text-[56px] md:text-3xl text-xl font-bold md:mb-28 mb-12">{t('careers.join_with_us')}</h2>
+          <h2 className="lg:text-5xl md:text-3xl text-xl font-bold md:mb-28 mb-12">{t('careers.join_with_us')}</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-y-28 gap-y-14">
             {/* Example Icon */}
             {salarys.map((item, index) => (
               <div key={index} className="flex flex-col items-center">
                 <div className="md:mb-8 mb-4">{item.icon}</div>
-                <h3 className="md:text-2xl text-base font-semibold">{item.title}</h3>
+                <h3 className="md:text-2xl text-base">{item.title}</h3>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="text-center md:my-14 my-6 md:mb-14 mb-12">
-        <h2 className="lg:text-[56px] md:text-3xl text-xl font-bold md:mb-14 mb-10">{t('careers.life')}</h2>
-        <div className="flex">
-          <div className="w-[70%]">
-            <div className="flex mb-4">
-              <div className="w-[65%] mr-4">
-                <img src="/images/life/life_1.png" alt="Image 1" className="object-cover h-full"/>
-              </div>
-              <div className="w-[35%] mr-2">
-                <img src="/images/life/life_2.png" alt="Image 1" className="object-cover w-full h-full float-right"/>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="w-[30%] mr-4 ml-1">
-                <img src="/images/life/life_3.png" alt="Image 1" className="object-cover h-full"/>
-              </div>
-              <div className="w-[70%]">
-                <img src="/images/life/life_4.png" alt="Image 1" className="object-cover h-full"/>
-              </div>
-            </div>
-          </div>
-          <div className="w-[30%] ml-4">
-            <img src="/images/life/life_slide.png" alt="Image 1" className="object-cover h-full"/>
-          </div>
+      <div className="container md:my-14 my-6 md:mb-14 mb-12">
+        <div className="text-center">
+          <h2 className="lg:text-5xl md:text-3xl text-xl font-bold md:mb-8 mb-4">{t('careers.life')}</h2>
+          <p className="md:text-2xl text-base md:mb-14 mb-10 text-white text-opacity-50 px-[15%]">
+            {t('careers.our_latest')}
+          </p>
         </div>
-        <div className="flex mt-4">
-          <div className="w-[70%]">
-            <div className="flex">
-              <div className="w-[30%] mr-4 ml-1">
-                <img src="/images/life/life_5.png" alt="Image 1" className="object-cover h-full"/>
-              </div>
-              <div className="w-[70%]">
-                <img src="/images/life/life_6.png" alt="Image 1" className="object-cover h-full"/>
+        {/* Grid cho các ứng dụng */}
+        <div className="grid grid-cols-3 ld:gap-14 sm:gap-10 gap-8 mt-14">
+          {/* App 1 */}
+          {lifes.map((life, index) => (
+            <div key={index} className="flex flex-col group relative ">
+              <div>
+                <img src={life.image} alt="Live Wallpaper" className="mx-auto rounded-lg transition-opacity duration-300 group-hover:opacity-20" />
+                <p className="sm:mt-8 mt-4 lg:text-2xl sm:text-xl text-xs font-semibold px-1">{life.title}</p>
+                <p className="sm:mt-4 mt-2 lg:text-xl sm:text-lg text-xs px-1">{life.date}</p>
               </div>
             </div>
-          </div>
-          <div className="w-[30%] ml-4">
-            <img src="/images/life/life_7.png" alt="Image 1" className="object-cover h-full"/>
-          </div>
+          ))}
         </div>
       </div>
 

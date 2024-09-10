@@ -176,7 +176,7 @@ export const SendMail = () => {
             disabled={loading}
             type="submit"
             onClick={() => onSubmitEmail()}
-            className="sm:w-9/12 w-full lg:p-6 md:p-4 p-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600">
+            className="sm:w-9/12 w-full lg:p-6 md:p-4 p-3 bg-customBlue text-white font-semibold rounded hover:bg-blue-600 md:text-2xl text-xl">
             {loading ? (
               <div className="flex items-center justify-center">
                 <svg
