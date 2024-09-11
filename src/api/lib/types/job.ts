@@ -4,13 +4,6 @@ export interface IJob {
   salary: string,
   expirationDate: string,
   jobDescription: Array<string>,
-  requirements: {
-    experience: Array<string>,
-    skills: Array<string>
-  },
+  requirements: Array<string>,
   benefits: Array<string>,
-  applyInstructions: {
-    content: Array<string>,
-    note: string
-  }
 }

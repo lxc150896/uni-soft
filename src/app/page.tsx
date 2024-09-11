@@ -98,21 +98,21 @@ export default function Home() {
 
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between">
           <div>
-            <div className="xl:ml-20 xl:mr-24 lg:ml-14 ml-4 lg:mr-20 mr-4 mx-auto flex justify-between items-center lg:py-8 md:py-4 py-2 h-auto">
+            <div className="sm:mt-0 mt-2 xl:ml-20 xl:mr-24 lg:ml-14 ml-4 lg:mr-20 mr-4 mx-auto flex justify-between items-center lg:py-8 md:py-4 py-2 h-auto">
               <div className="flex items-center space-x-4">
                 <img src="/images/logo.png" alt="Logo" className="xl:w-28 xl:h-20 md:w-14 md:h-10 w-10 h-6" />
               </div>
               <Menu />
             </div>
             {/* <div className="absolute right-0"> */}
-              <img src="/images/global.png" alt="Background" className="absolute right-0 rotate-image mt-3 2xl:mr-[2%] mr-[2%] 2xl:w-[35%] md:w-[38%] w-[34%]" />
+              <img src="/images/global.png" alt="Background" className="absolute right-0 rotate-image sm:mt-3 mt-0 2xl:mr-[2%] sm:mr-[2%] mr-[4%] 2xl:w-[35%] md:w-[38%] w-[35%]" />
             {/* </div> */}
 
             <div className="px-[7%] pt-[2%]">
-              <h1 className="xl:text-[86px] lg:text-6xl md:text-4xl sm:text-2xl font-bold lg:leading-snug md:leading-snug">
+              <h1 className="xl:text-[86px] lg:text-6xl md:text-4xl sm:text-2xl text-xl font-bold lg:leading-snug md:leading-snug">
                 <p>{t('home.innovation')}</p>
-                <div className="px-[7%]">{t('home.creativity')}</div>
-                <p className="px-[14%]">{t('home.go_beyond')}</p>
+                <div className="sm:px-[7%] px-[8%]">{t('home.creativity')}</div>
+                <p className="sm:px-[14%] px-[16%]">{t('home.go_beyond')}</p>
               </h1>
             </div>
 
@@ -131,7 +131,7 @@ export default function Home() {
       </div>
 
       {/* Đoạn text Leading Corporations ở cuối */}
-      <div className="xl:text-5xl lg:text-4xl text-center text-lg font-bold sm:mt-[2%] mt-0">
+      <div className="xl:text-5xl lg:text-4xl text-center sm:text-lg text-base font-bold sm:mt-[2%] mt-0">
         {t('home.leading_corporations')}
       </div>
 

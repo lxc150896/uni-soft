@@ -73,6 +73,12 @@ body {
   .rotate-image {
     animation: rotate 100s linear infinite;
   }
+
+  li {
+    position: relative;
+    padding-left: 2.5em; /* Khoảng cách từ dấu chấm đến text */
+    text-indent: -1.45em; /* Đẩy phần text sang trái để thẳng hàng với dòng đầu */
+  }
 }
 
 @layer utilities {

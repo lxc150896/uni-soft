@@ -12,9 +12,12 @@ export default function Home() {
   const router = useRouter();
 
   const values = [
-    { id: 1, title: '[Unisoft Product] Developer Android All Level', local: 'Ha Noi', salary: 'Up to 1500$', date: '10/10/2024', link: 'https://docs.google.com/document/d/1ckyABjmBygErxtockROKL4oSlE8jsg4Rg9hYwDOf5X8/edit' },
-    { id: 2, title: '[Unisoft Product] Developer Swift Junior', local: 'Ha Noi', salary: 'Up to 1500$', date: '10/10/2024', link: 'https://docs.google.com/document/d/1bjUCd15T5nukIyvcHhxkiUW7rFDzPe7fIukvO1bEXlw/edit' },
-    { id: 3, title: '[Unisoft Product] Performance Marketing Specialist - User Acquisition', local: 'Ha Noi', salary: 'Up to 1000$', date: '10/10/2024', link: 'https://docs.google.com/document/d/1vGZB22uaI2hErUfx8JTS6iSvIsLZaCAQ2Fua-dnyshk/edit?pli=1' },
+    { id: 1, title: '[ Unisoft Product] Android Developer Intern /Fresher', local: ' Ha Noi', salary: ' Up to 500$', date: ' 10/09/2024'},
+    { id: 2, title: '[ Unisoft Product] Android Developer Junior / Senior', local: ' Ha Noi', salary: 'Up to 100$', date: '10/10/2024'},
+    { id: 3, title: '[ Unisoft Product] User Acquisition (Intern )', local: ' Ha Noi', salary: 'Up to 1000$', date: '10/10/2024'},
+    { id: 4, title: '[ Unisoft Product] UI/ UX Designer', local: ' Ha Noi', salary: ' Up to 800$', date: ' 10/09/2024'},
+    { id: 5, title: '[ Unisoft Product] User Acquisition (Jun/Sen )', local: ' Ha Noi', salary: 'Up to 1000$', date: '10/10/2024'},
+    { id: 6, title: '[ Unisoft Product] IOS Developer', local: ' Ha Noi', salary: 'Up to 1000$', date: '10/10/2024'},
   ];
 
   const salarys = [
@@ -52,32 +55,51 @@ export default function Home() {
         {/* Top Position */}
         <div className="md:mb-16 mb-6">
           <h2 className="text-center lg:text-5xl md:text-3xl text-xl font-bold md:mb-20 mb-10">{t('careers.top_position')}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:gap-8 gap-6">
             {values.map((value, index) => (
               <div
-                key={index}
-                className="p-6 bg-gray-800 text-white rounded-lg shadow-md flex flex-col justify-between"
-              >
-                <div>
-                  <h3 className="md:text-xl text-lg font-semibold md:mb-3 mb-2">{value.title}</h3>
-                  <div className="flex items-center md:text-base md:mb-3 mb-2 text-sm md-3">
-                    <img src="/images/footer_icon_map.png" alt="Logo" className="lg:w-10 w-6" />: {value.local}
-                  </div>
-                  <p className="md:mb-3 mb-2">
-                    <span className="md:text-base text-sm md-3">{t('careers.salary')} </span><span className="font-bold">{value.salary}</span>
-                  </p>
-                  <p className="md:mb-3 mb-2">
-                    <span className="md:text-base md:mb-3 text-sm md-3">{t('careers.expiration_date')} </span><span className="font-bold">{value.date}</span>
-                  </p>
+              key={index}
+              className="pt-5 pr-2 pb-5 pl-5 bg-gray-800 text-white rounded-lg shadow-md flex flex-col justify-between"
+            >
+              <div>
+                {/* Title và hình ảnh "New" */}
+                <div className="flex justify-between">
+                  <h3 className="md:text-xl text-lg font-semibold mb-2">{value.title}</h3>
+                  <img
+                    src="/images/new.png"
+                    alt="New"
+                    className="w-10 h-6"
+                  />
                 </div>
-                <p
-                  className="md:text-base text-sm text-blue-500 mt-auto cursor-pointer"
-                  rel="noopener noreferrer"
-                  onClick={() => router.push(`/careers/${value.id}`)}
-                >
-                  {t('careers.view_jd')}
+            
+                {/* Địa điểm */}
+                <div className="flex items-center md:text-base mb-2 text-sm md-3">
+                  <img src="/images/footer_icon_map.png" alt="Location Icon" className="lg:w-6 w-6" />: {value.local}
+                </div>
+            
+                {/* Lương */}
+                <p className="md:mb-3 mb-2">
+                  <span className="md:text-base text-sm md-3">{t('careers.salary')} </span>
+                  <span className="font-bold">{value.salary}</span>
+                </p>
+            
+                {/* Ngày hết hạn */}
+                <p className="md:mb-3 mb-2">
+                  <span className="md:text-base md:mb-3 text-sm md-3">{t('careers.expiration_date')} </span>
+                  <span className="font-bold">{value.date}</span>
                 </p>
               </div>
+            
+              {/* Link View JD */}
+              <p
+                className="md:text-base text-sm text-blue-500 mt-auto cursor-pointer"
+                rel="noopener noreferrer"
+                onClick={() => router.push(`/careers/${value.id}`)}
+              >
+                {t('careers.view_jd')}
+              </p>
+            </div>
+            
             ))}
           </div>
         </div>
