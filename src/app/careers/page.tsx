@@ -12,10 +12,10 @@ export default function Home() {
   const router = useRouter();
 
   const values = [
-    { id: 1, title: '[ Unisoft Product] Android Developer Intern /Fresher', local: ' Ha Noi', salary: ' Up to 500$', date: ' 10/09/2024'},
-    { id: 2, title: '[ Unisoft Product] Android Developer Junior / Senior', local: ' Ha Noi', salary: 'Up to 100$', date: '10/10/2024'},
+    { id: 1, title: '[ Unisoft Product] Android Developer Intern /Fresher', local: ' Ha Noi', salary: ' Up to 500$', date: ' 10/10/2024'},
+    { id: 2, title: '[ Unisoft Product] Android Developer Junior / Senior', local: ' Ha Noi', salary: 'Up to 1000$', date: '10/10/2024'},
     { id: 3, title: '[ Unisoft Product] User Acquisition (Intern )', local: ' Ha Noi', salary: 'Up to 1000$', date: '10/10/2024'},
-    { id: 4, title: '[ Unisoft Product] UI/ UX Designer', local: ' Ha Noi', salary: ' Up to 800$', date: ' 10/09/2024'},
+    { id: 4, title: '[ Unisoft Product] UI/ UX Designer', local: ' Ha Noi', salary: ' Up to 800$', date: ' 10/10/2024'},
     { id: 5, title: '[ Unisoft Product] User Acquisition (Jun/Sen )', local: ' Ha Noi', salary: 'Up to 1000$', date: '10/10/2024'},
     { id: 6, title: '[ Unisoft Product] IOS Developer', local: ' Ha Noi', salary: 'Up to 1000$', date: '10/10/2024'},
   ];
