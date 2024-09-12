@@ -5,9 +5,11 @@ import '@/app/i18n';
 import { Footer } from "@/components/Footer";
 import { Menu } from "@/components/Header/Menu";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const { t } = useTranslation();
+  const router = useRouter();
 
   const values = [
     { icon: <img src="/images/group_1.png" className="xl:w-full lg:w-16"/>, text: t('home.push_for_speed') },
@@ -117,7 +119,10 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center items-center mt-[5%]">
-              <button className="xl:py-6 xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-customBlue rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] flex items-center duration-300 hover:scale-105 hover:brightness-125">
+              <button
+                className="xl:py-6 xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-customBlue rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] flex items-center duration-300 hover:scale-105 hover:brightness-125"
+                onClick={() => router.push('/contact')}
+              >
               {t('home.learn_more')}
                 <svg className="ml-3 lg:w-[18px] lg:h-[19px] w-3 h-3" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 17.5L16.9995 1.5M16.9995 1.5H2.53267M16.9995 1.5V15.3378" stroke="white" strokeWidth="2"/>
@@ -176,7 +181,10 @@ export default function Home() {
                   {t('home.tag_1')}
                 </p>
                 <div className="flex justify-center items-center 2xl:mt-28 xl:mt-24 mt-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <button className="2xl:py-6 2xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-green-400 rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] font-semibold flex items-center duration-300 hover:scale-105 hover:brightness-125">
+                  <button
+                    className="2xl:py-6 2xl:px-24 lg:py-3 lg:px-14 md:py-2 md:px-8 py-1.5 px-3 bg-gradient-to-r from-blue-600 to-green-400 rounded-md xl:text-2xl lg:text-lg md:text-base text-[10px] font-semibold flex items-center duration-300 hover:scale-105 hover:brightness-125"
+                    onClick={() => router.push('/about')}
+                  >
                     {t('home.learn_more')}
                     <svg className="ml-3 lg:w-[18px] lg:h-[19px] w-3 h-3" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 17.5L16.9995 1.5M16.9995 1.5H2.53267M16.9995 1.5V15.3378" stroke="white" strokeWidth="2"/>

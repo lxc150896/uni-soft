@@ -41,7 +41,7 @@ export const Menu = () => {
   }
 
   return (
-    <nav className="flex xl:space-x-20 lg:space-x-10 md:space-x-6 space-x-2 lg:text-xl xl:text-2xl text-xs">
+    <nav className="flex xl:space-x-14 lg:space-x-10 md:space-x-6 space-x-2 xl:text-xl lg:text-lg md:text-sm text-[10px]">
       <button onClick={() => changerMenu('home')} className={`menu-item ${keyMenu === 'home' ? 'active' : ''}`}>{t('menu.home')}</button>
       <button onClick={() => changerMenu('about')} className={`menu-item ${keyMenu === 'about' ? 'active' : ''}`}>{t('menu.about')}</button>
       <button onClick={() => changerMenu('careers')} className={`menu-item ${keyMenu === 'careers' ? 'active' : ''}`}>{t('menu.careers')}</button>
