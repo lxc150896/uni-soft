@@ -115,7 +115,7 @@ export default function Home() {
             <h2 className="xl:text-2xl md:text-xl text-lg font-semibold text-white">Cách thức ứng tuyển</h2>
             <ul className="xl:text-2xl md:text-xl text-lg list-disc list-inside space-y-2 sm:mt-4 mt-2">
                 <li className="font-thin leading-loose">
-                  💌 Ứng viên gửi CV về email: hrunisoftstudio.com
+                  💌 Ứng viên gửi CV về email: hatv.hr@unisoftstudio.com
                 </li>
                 <li className="font-thin leading-loose">
                   ➡️Hotline: 024 6662 5287 | HR Department
