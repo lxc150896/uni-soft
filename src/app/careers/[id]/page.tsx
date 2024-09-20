@@ -121,7 +121,7 @@ export default function Home() {
                   ➡️Hotline: 024 6662 5287 | HR Department
                 </li>
                 <li className="font-thin leading-loose">
-                  ➡️Head Office: Tầng6, toà Up Office,75 Trần Thái Tông, Cầu Giấy, Hà Nội
+                  ➡️Head Office: Tầng6, toà Up Office,75 Trần Thái Tông, Cầu Giấy , Hà Nội
                 </li>
             </ul>
           </div>
