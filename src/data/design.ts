@@ -2,7 +2,7 @@ export const design = {
   "company": "[Unisoft Apps] UI/ UX Designer",
   "location": "Hà Nội",
   "salary": "Up to 800$",
-  "expirationDate": "10/10/2024",
+  "expirationDate": "31/12/2024",
   "jobDescription": [
     "Thiết kế các ấn phẩm để team Marketing chạy quảng cáo (creative) trên các nền tảng như: image ads, banner, cover, các creative ads khác cho các sản phẩm Mobile Apps",
     "Tham gia nghiên cứu, phân tích, sáng tạo, A/B testing, theo dõi chỉ số, đánh giá nhằm tối ưu các creative ads (image ads, banner, cover,…) của sản phẩm App để thúc đẩy sự phát triển của sản phẩm.",

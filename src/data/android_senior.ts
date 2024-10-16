@@ -2,7 +2,7 @@ export const androidSenior = {
   "company": "[ Unisoft Product] Android Developer Junior / Senior",
   "location": "Hà Nội",
   "salary": "Up to 1000$",
-  "expirationDate": "10/10/2024",
+  "expirationDate": "31/12/2024",
   "jobDescription": [
     "Phát triển các sản phẩm ứng dụng (App Products) trên nền tảng Android",
     "Thiết kế và phát triển ý tưởng mới cho các ứng dụng Android",
