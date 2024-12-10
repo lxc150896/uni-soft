@@ -21,14 +21,34 @@ export default function Home() {
   const [jobData, setJobData] = useState<IJob>();
   const [modalState, setModalState] = useState(false)
 
+  function getLastDayOfCurrentMonth(): string {
+    // Lấy ngày hiện tại
+    const today = new Date();
+  
+    // Tạo đối tượng Date cho ngày đầu tiên của tháng kế tiếp
+    const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+  
+    // Trừ 1 ngày từ timestamp (số miligiây)
+    const lastDayOfMonth = new Date(nextMonth.getTime() - 1);
+  
+    // Lấy ngày, tháng, năm
+    const day = String(lastDayOfMonth.getDate()).padStart(2, '0'); // Đảm bảo 2 chữ số
+    const month = String(lastDayOfMonth.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0
+    const year = lastDayOfMonth.getFullYear(); // Lấy năm đầy đủ
+  
+    // Trả về định dạng dd/mm/yyyy
+    return `${day}/${month}/${year}`;
+  }
+
+  const currentDate = getLastDayOfCurrentMonth()
 
   const values = [
-    { id: 1, title: '[ Unisoft Product] Android Developer Intern /Fresher', local: ' Ha Noi', salary: ' Up to 500$', date: '31/12/2024'},
-    { id: 2, title: '[ Unisoft Product] Android Developer Junior / Senior', local: ' Ha Noi', salary: 'Up to 1000$', date: '31/12/2024'},
-    { id: 3, title: '[ Unisoft Product] User Acquisition (Intern )', local: ' Ha Noi', salary: 'Up to 1000$', date: '31/12/2024'},
-    { id: 4, title: '[ Unisoft Product] UI/ UX Designer', local: ' Ha Noi', salary: ' Up to 800$', date: '31/12/2024'},
-    { id: 5, title: '[ Unisoft Product] User Acquisition (Jun/Sen )', local: ' Ha Noi', salary: 'Up to 1000$', date: '31/12/2024'},
-    { id: 6, title: '[ Unisoft Product] IOS Developer', local: ' Ha Noi', salary: 'Up to 1000$', date: '31/12/2024'},
+    { id: 1, title: '[ Unisoft Product] Android Developer Intern /Fresher', local: ' Ha Noi', salary: ' Up to 500$', date: currentDate},
+    { id: 2, title: '[ Unisoft Product] Android Developer Junior / Senior', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
+    { id: 3, title: '[ Unisoft Product] User Acquisition (Intern )', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
+    { id: 4, title: '[ Unisoft Product] UI/ UX Designer', local: ' Ha Noi', salary: ' Up to 800$', date: currentDate},
+    { id: 5, title: '[ Unisoft Product] User Acquisition (Jun/Sen )', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
+    { id: 6, title: '[ Unisoft Product] IOS Developer', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
   ];
 
   useEffect(() => {
@@ -74,7 +94,7 @@ export default function Home() {
             </div>
             <div className="text-gray-300 sm:mb-0 mb-2">
               <span>Expiration date:</span>{' '}
-              <span className="text-blue-400">{jobData.expirationDate}</span>
+              <span className="text-blue-400">{currentDate}</span>
             </div>
           </div>
 
@@ -115,7 +135,7 @@ export default function Home() {
             <h2 className="xl:text-2xl md:text-xl text-lg font-semibold text-white">Cách thức ứng tuyển</h2>
             <ul className="xl:text-2xl md:text-xl text-lg list-disc list-inside space-y-2 sm:mt-4 mt-2">
                 <li className="font-thin leading-loose">
-                  💌 Ứng viên gửi CV về email: hatv.hr@unisoftstudio.com
+                  💌 Ứng viên gửi CV về email: hr@unisoftstudio.com
                 </li>
                 <li className="font-thin leading-loose">
                   ➡️Hotline: 024 6662 5287 | HR Department

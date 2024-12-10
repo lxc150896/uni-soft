@@ -25,7 +25,7 @@ export const Footer = () => {
         <div className="flex justify-center items-center sm:ml-0 ml-[-10px]">
           <img src="/images/footer_icon_email.png" alt="Logo" className="lg:w-11 md:w-8 w-5" />
           <div className="xl:p-3 lg:p-1">
-            <p className="md:mb-1 mb-0 lg:text-xs xl:text-base 2xl:text-lg md:text-[10px] text-[8px]">{t('footer.email')}</p> <p className="lg:text-[10px] xl:text-xs 2xl:text-sm md:text-[8px] text-[6px]">hatv.hr@unisoftstudio.com</p>
+            <p className="md:mb-1 mb-0 lg:text-xs xl:text-base 2xl:text-lg md:text-[10px] text-[8px]">{t('footer.email')}</p> <p className="lg:text-[10px] xl:text-xs 2xl:text-sm md:text-[8px] text-[6px]">hr@unisoftstudio.com</p>
           </div>
         </div>
         

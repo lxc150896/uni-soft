@@ -11,13 +11,34 @@ export default function Home() {
   const { t } = useTranslation();
   const router = useRouter();
 
+  function getLastDayOfCurrentMonth(): string {
+    // Lấy ngày hiện tại
+    const today = new Date();
+  
+    // Tạo đối tượng Date cho ngày đầu tiên của tháng kế tiếp
+    const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+  
+    // Trừ 1 ngày từ timestamp (số miligiây)
+    const lastDayOfMonth = new Date(nextMonth.getTime() - 1);
+  
+    // Lấy ngày, tháng, năm
+    const day = String(lastDayOfMonth.getDate()).padStart(2, '0'); // Đảm bảo 2 chữ số
+    const month = String(lastDayOfMonth.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0
+    const year = lastDayOfMonth.getFullYear(); // Lấy năm đầy đủ
+  
+    // Trả về định dạng dd/mm/yyyy
+    return `${day}/${month}/${year}`;
+  }
+
+  const currentDate = getLastDayOfCurrentMonth()
+
   const values = [
-    { id: 1, title: '[ Unisoft Product] Android Developer Intern /Fresher', local: ' Ha Noi', salary: ' Up to 500$', date: '31/12/2024'},
-    { id: 2, title: '[ Unisoft Product] Android Developer Junior / Senior', local: ' Ha Noi', salary: 'Up to 1000$', date: '31/12/2024'},
-    { id: 3, title: '[ Unisoft Product] User Acquisition (Intern )', local: ' Ha Noi', salary: 'Up to 1000$', date: '31/12/2024'},
-    { id: 4, title: '[ Unisoft Product] UI/ UX Designer', local: ' Ha Noi', salary: ' Up to 800$', date: '31/12/2024'},
-    { id: 5, title: '[ Unisoft Product] User Acquisition (Jun/Sen )', local: ' Ha Noi', salary: 'Up to 1000$', date: '31/12/2024'},
-    { id: 6, title: '[ Unisoft Product] IOS Developer', local: ' Ha Noi', salary: 'Up to 1000$', date: '31/12/2024'},
+    { id: 1, title: '[ Unisoft Product] Android Developer Intern /Fresher', local: ' Ha Noi', salary: ' Up to 500$', date: currentDate},
+    { id: 2, title: '[ Unisoft Product] Android Developer Junior / Senior', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
+    { id: 3, title: '[ Unisoft Product] User Acquisition (Intern )', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
+    { id: 4, title: '[ Unisoft Product] UI/ UX Designer', local: ' Ha Noi', salary: ' Up to 800$', date: currentDate},
+    { id: 5, title: '[ Unisoft Product] User Acquisition (Jun/Sen )', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
+    { id: 6, title: '[ Unisoft Product] IOS Developer', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
   ];
 
   const salarys = [

@@ -2,7 +2,6 @@ export const ios = {
   "company": "[Unisoft Apps] IOS Developer Junior",
   "location": "Hà Nội",
   "salary": "Up to 1000$",
-  "expirationDate": "31/12/2024",
   "jobDescription": [
     "Phát triển mới các dự án của công ty trong lĩnh vực tiện ích, giải trí.",
     "Đánh giá, phân tích, nâng cấp và tối ưu mã nguồn trong quá trình phát triển.",

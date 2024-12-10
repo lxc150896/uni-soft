@@ -2,7 +2,6 @@ export const acquisitionSenior = {
     "company": "[Unisoft Apps]  User Acquisition (Junior / Senior)",
     "location": "Hà Nội",
     "salary": "Up to 1000$",
-    "expirationDate": "31/12/2024",
     "jobDescription": [
       "Quản lý chiến lược và thiết lập các chiến dịch quảng cáo trên các nền tảng quảng cáo Google Adword, Facebook Ads, Search Ads, IronSource, Unity Ads... Optimize nội dung và chỉ số performance của các digital campaigns.",
       "Phối hợp với Team sản phẩm để lên chiến lược marketing.",
