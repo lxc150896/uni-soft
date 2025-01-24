@@ -39,6 +39,7 @@ export default function Home() {
     { id: 4, title: '[ Unisoft Product] UI/ UX Designer', local: ' Ha Noi', salary: ' Up to 800$', date: currentDate},
     { id: 5, title: '[ Unisoft Product] User Acquisition (Jun/Sen )', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
     { id: 6, title: '[ Unisoft Product] IOS Developer', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
+    { id: 7, title: '[ Unisoft Product] Video Editor Fresher', local: ' Ha Noi', salary: 'Up to 500$', date: '31/03/2025'},
   ];
 
   const salarys = [

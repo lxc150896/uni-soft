@@ -49,10 +49,11 @@ export default function Home() {
     { id: 4, title: '[ Unisoft Product] UI/ UX Designer', local: ' Ha Noi', salary: ' Up to 800$', date: currentDate},
     { id: 5, title: '[ Unisoft Product] User Acquisition (Jun/Sen )', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
     { id: 6, title: '[ Unisoft Product] IOS Developer', local: ' Ha Noi', salary: 'Up to 1000$', date: currentDate},
+    { id: 7, title: '[ Unisoft Product] Video Editor Fresher', local: ' Ha Noi', salary: 'Up to 500$', date: '31/03/2025'},
   ];
 
   useEffect(() => {
-    const data = getJob(id as '1' | '2' | '3' | '4' | '5' | '6');
+    const data = getJob(id as '1' | '2' | '3' | '4' | '5' | '6' | '7');
     setJobData(data);
   }, []);
 
@@ -94,7 +95,7 @@ export default function Home() {
             </div>
             <div className="text-gray-300 sm:mb-0 mb-2">
               <span>Expiration date:</span>{' '}
-              <span className="text-blue-400">{currentDate}</span>
+              <span className="text-blue-400">{jobData.date ? jobData.date : currentDate}</span>
             </div>
           </div>
 

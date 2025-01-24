@@ -5,4 +5,5 @@ export interface IJob {
   jobDescription: Array<string>,
   requirements: Array<string>,
   benefits: Array<string>,
+  date?: string;
 }

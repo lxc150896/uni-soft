@@ -4,6 +4,7 @@ import { acquisitionIntern } from "@/data/acquisition_intern";
 import { design } from "@/data/design";
 import { acquisitionSenior } from "@/data/acquisition_senior";
 import { ios } from "@/data/ios";
+import { video_editor } from "@/data/video_editor";
 
 
 const jobs = {
@@ -13,8 +14,9 @@ const jobs = {
   '4': design,
   '5': acquisitionSenior,
   '6': ios,
+  '7': video_editor,
 };
 
-export const getJob = (id: '1' | '2' | '3' | '4' | '5' | '6') => {
+export const getJob = (id: '1' | '2' | '3' | '4' | '5' | '6' | '7') => {
   return jobs[id]
 };
